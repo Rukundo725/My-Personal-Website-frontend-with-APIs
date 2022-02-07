@@ -5,7 +5,7 @@ ATLP CAPSTONE PROJECT
 
 
 
-Welcome to My-Personal-Website Prject!
+Welcome to My-Personal-Website Project!
 =================================================
 
 ## Project Overview
@@ -42,10 +42,13 @@ These must be installed before or have knowledge on them:
       Live Server Vscode extension
       Live Saas compiler
 
-**Clone this repo by pasting this code to your local git working directory:** *git clone https://github.com/Rukundo725/My-Personal-Website.git*
+**Clone this repo by pasting this code to your local git working directory:** 
+    
+    *git clone https://github.com/Rukundo725/My-Personal-Website.git*
 
 **Acknowledgement:**
- <a href="https://andela.com/engineers/technical-leadership-program-rwanda/">Andela Technical Leadership Program (Rwanda) </a> 
+
+    <a href="https://andela.com/engineers/technical-leadership-program-rwanda/">Andela Technical Leadership Program (Rwanda) </a> 
 
 
 
