@@ -42,13 +42,13 @@ These must be installed before or have knowledge on them:
       Live Server Vscode extension
       Live Saas compiler
 
-**Clone this repo by pasting this code to your local git working directory:** 
+**Clone this repo by pasting this code to your local git working directory:** <br>
     
-    *git clone https://github.com/Rukundo725/My-Personal-Website.git*
+    git clone https://github.com/Rukundo725/My-Personal-Website.git
 
-**Acknowledgement:**
+**Acknowledgement:**<br>
 
-    <a href="https://andela.com/engineers/technical-leadership-program-rwanda/">Andela Technical Leadership Program (Rwanda) </a> 
+<a href="https://andela.com/engineers/technical-leadership-program-rwanda/">Andela Technical Leadership Program (Rwanda) </a> 
 
 
 
