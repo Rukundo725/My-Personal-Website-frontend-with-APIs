@@ -53,6 +53,7 @@ These must be installed before or have knowledge on them:
 
 <a href="https://andela.com/engineers/technical-leadership-program-rwanda/" target="_blank">Andela Technical Leadership Program (Rwanda) </a> 
 
+[Andela Technical Leadership Program (Rwanda)](https://andela.com/engineers/technical-leadership-program-rwanda/){:target="_blank" rel="noopener"}
 
 
        
