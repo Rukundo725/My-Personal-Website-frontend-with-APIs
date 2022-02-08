@@ -46,6 +46,9 @@ These must be installed before or have knowledge on them:
     
     git clone https://github.com/Rukundo725/My-Personal-Website.git
 
+**Find the Figma prototype <a href="https://www.figma.com/file/S8njvnUqelmX5waQGHuoxZ/My-personal-website?node-id=0%3A1">here</a>** <br>
+    
+
 **Acknowledgement:**<br>
 
 <a href="https://andela.com/engineers/technical-leadership-program-rwanda/">Andela Technical Leadership Program (Rwanda) </a> 
