@@ -115,3 +115,40 @@ a{
         }
     }
  }
+
+//  <!-- main part -->? 
+
+.summary{
+    text-align: center;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: lighter;
+    line-height: 50px;
+    letter-spacing: 2em;
+}
+
+// <!-- summary content --> 
+
+.summary-contenet{
+
+    display: flex;
+    margin: 0 50px;
+    justify-content: space-between;
+
+    p{
+
+        margin-right: 50px;
+    }
+
+    // <!-- image in the summary contente --> 
+
+    img{
+
+        height:360px;
+        width: 540px;
+        margin: 50px 0;
+    
+        
+    }
+}
