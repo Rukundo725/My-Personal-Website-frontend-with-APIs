@@ -260,4 +260,50 @@ a:hover {
 .blog-cta .container .article-container article .date {
   margin-right: 100px;
 }
+
+.contact-me-cta .reach-me-out h2 {
+  text-align: center;
+}
+
+.contact-me-cta .reach-me-out hr {
+  width: 60%;
+  margin: 0px 300px;
+  margin-bottom: 30px;
+}
+
+.contact-me-cta .reach-me-out .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 200px;
+  margin-right: 100px;
+}
+
+.contact-me-cta .reach-me-out .address .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact-me-cta .reach-me-out .address .container .material-icons {
+  margin-top: 25px;
+  padding: 2 10px;
+}
+
+.contact-me-cta .reach-me-out .address .container .vl {
+  border: 1px var(--primary-color) solid;
+  margin: 0 7px;
+}
+
+.contact-me-cta .reach-me-out .address .container span {
+  color: var(--primary-color);
+  font-size: xx-small;
+}
+
+.contact-me-cta .reach-me-out .address .container span #left {
+  float: left;
+}
 /*# sourceMappingURL=main.css.map */
