@@ -349,5 +349,71 @@ a{
     }
 }
 
+// <!-- contact me part --> 
+
+.contact-me-cta{
+
+    // <!-- reach me out part  --> 
+
+    .reach-me-out{
+
+        h2{
+            text-align: center;
+        }
+
+        hr {
+
+            width:60%;
+            margin: 0px 300px;
+            margin-bottom: 30px;
+
+        }
+
+        // <!-- contact info  --> 
+
+        .address{
+
+            // <!--  info  --> 
+
+           
+            display: flex;
+            justify-content: space-between;
+            margin-left: 200px;
+            margin-right: 100px;
+
+            .container{
+
+                display: flex;
+
+                .material-icons{
+
+                    margin-top: 25px;
+                    padding: 2 10px;
+
+                }
+
+                .vl{
+
+                    border: 1px var(--primary-color) solid;
+                    margin: 0 7px;
+
+                }
+
+                span{
+                    color: var(--primary-color);
+                    font-size: xx-small;
+
+                    #left{
+                        float: left;
+                    }
+                }
+            }
+        }
+
+    }
+
+    // <!-- message-me part  --> 
+    
+}
 
 
