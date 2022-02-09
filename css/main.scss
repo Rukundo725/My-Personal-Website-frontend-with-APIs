@@ -291,5 +291,63 @@ a{
             width: 254px;
         }
     }
+
+    .container{
+        // display: flex;
+        display: grid;
+        // grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 20% 60% 20%;
+        // border: 2px red solid;
+
+        // <!-- articles  --> 
+
+        .img-right{
+            -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+
+        .article-container{
+            
+            article{
+
+                display: flex;
+
+                #article-img{
+                    height: 173px;
+                    width: 173px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                    margin-top: 30px;
+    
+                }
+
+                .article-content{
+                    span{
+                        
+                        a{
+                            color: var(--secondary-color);
+
+                            &:hover{
+                                color: var(--third-color);
+                            }
+                        }
+                    }
+                }
+
+                .date-comment{
+                    display: flex;
+                    color: var(--secondary-color);
+
+                }
+
+                .date{
+                    margin-right: 100px;
+                }
+
+            }
+        }
+    }
 }
+
+
 

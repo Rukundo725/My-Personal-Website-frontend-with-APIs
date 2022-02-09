@@ -215,4 +215,49 @@ a:hover {
   height: 220px;
   width: 254px;
 }
+
+.blog-cta .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 60% 20%;
+      grid-template-columns: 20% 60% 20%;
+}
+
+.blog-cta .container .img-right {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.blog-cta .container .article-container article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blog-cta .container .article-container article #article-img {
+  height: 173px;
+  width: 173px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 30px;
+}
+
+.blog-cta .container .article-container article .article-content span a {
+  color: var(--secondary-color);
+}
+
+.blog-cta .container .article-container article .article-content span a:hover {
+  color: var(--third-color);
+}
+
+.blog-cta .container .article-container article .date-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--secondary-color);
+}
+
+.blog-cta .container .article-container article .date {
+  margin-right: 100px;
+}
 /*# sourceMappingURL=main.css.map */
