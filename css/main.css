@@ -2,6 +2,7 @@
 :root {
   --primary-color: #FFFFFF;
   --secondary-color:#59CEA7;
+  --third-color: #4AA6F1;
 }
 
 body {
@@ -11,6 +12,10 @@ body {
   font-family: 'Poppins';
   width: 100%;
   color: var(--primary-color);
+}
+
+main {
+  margin: 0 50px;
 }
 
 a {
@@ -95,5 +100,119 @@ a:hover {
   margin-left: 300px;
   margin-right: 300px;
   text-transform: capitalize;
+}
+
+.summary {
+  text-align: center;
+  font-family: Lato;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: lighter;
+  line-height: 50px;
+  letter-spacing: 2em;
+}
+
+.summary-contenet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.summary-contenet p {
+  margin-right: 50px;
+}
+
+.summary-contenet img {
+  height: 360px;
+  width: 540px;
+  margin: 20px 0;
+}
+
+.read-more {
+  text-align: center;
+}
+
+.read-more #read-more {
+  border-radius: 20px;
+  padding: auto;
+  background-color: var(--third-color);
+}
+
+.read-more #read-more a {
+  font-size: 20px;
+  color: black;
+}
+
+.read-more #read-more a:hover {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.projects-cta .project-cta-icon {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.projects-cta .project-cta-icon img {
+  height: 221px;
+  width: 198px;
+}
+
+.projects-cta .project-cta-icon h2 {
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.projects-cta .project-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: center;
+  margin-bottom: 50px;
+}
+
+.projects-cta .project-content .container {
+  text-align: center;
+  margin: 0 30px;
+}
+
+.projects-cta .project-content .container #content-img {
+  height: 174px;
+  width: 262px;
+  left: 64px;
+  top: 21px;
+  border-radius: 0px;
+}
+
+.projects-cta .project-content .container #github-ink {
+  border-radius: 20px;
+  padding: auto;
+  background-color: var(--third-color);
+}
+
+.projects-cta .project-content .container #github-ink a {
+  font-size: 20px;
+  color: black;
+}
+
+.projects-cta .project-content .container #github-ink a:hover {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.blog-cta .blog-cta-icon {
+  text-align: center;
+}
+
+.blog-cta .blog-cta-icon #blog-icon {
+  height: 220px;
+  width: 254px;
 }
 /*# sourceMappingURL=main.css.map */

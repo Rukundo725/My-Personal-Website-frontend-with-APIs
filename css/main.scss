@@ -3,6 +3,7 @@
 :root {
     --primary-color: #FFFFFF;
     --secondary-color:#59CEA7;
+    --third-color: #4AA6F1;
 
 }
 body{
@@ -12,6 +13,9 @@ body{
     font-family: 'Poppins';
     width: 100%;
     color: var(--primary-color);
+}
+main{
+    margin: 0 50px;
 }
 
 // all links 
@@ -115,3 +119,177 @@ a{
         }
     }
  }
+
+//  <!-- main part -->? 
+
+.summary{
+    text-align: center;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: lighter;
+    line-height: 50px;
+    letter-spacing: 2em;
+}
+
+// <!-- summary content --> 
+
+.summary-contenet{
+
+    display: flex;
+   
+    justify-content: space-between;
+
+    p{
+
+        margin-right: 50px;
+    }
+
+    // <!-- image in the summary contente --> 
+
+    img{
+
+        height:360px;
+        width: 540px;
+        margin: 20px 0;
+
+    }
+
+    // <!-- read-more button  --> 
+
+    
+   
+}
+
+.read-more{
+       
+    text-align: center;
+
+    #read-more{
+        border-radius: 20px;
+        padding: auto;
+        background-color: var(--third-color);
+
+        a{
+            font-size: 20px;
+            color: black;
+
+            &:hover{
+                color: var(--primary-color);
+                font-weight: bold;
+            }
+            
+        }
+    }
+}
+
+// <!-- projects part --> 
+
+.projects-cta{
+
+    // <!-- project header  --> 
+
+    .project-cta-icon{
+
+        text-align: center;
+        margin: 30px 0;
+    
+        img{
+            height: 221px;
+            width: 198px;
+            
+        }
+    
+        h2{
+            font-family: Roboto;
+            font-size: 30px;
+            font-weight: bold;
+    
+        }
+    
+    
+    }
+
+    // <!-- project content  --> 
+
+    .project-content{
+
+    display:flex;
+    justify-content: space-between;
+    justify-items: center;
+    margin-bottom: 50px;
+
+    // <!-- content   --> 
+
+    .container{
+
+        text-align: center;
+        margin:0 30px;
+
+        #content-img{
+            height: 174px;
+            width: 262px;
+            left: 64px;
+            top: 21px;
+            border-radius: 0px;
+            
+        }
+
+        #github-ink{
+            border-radius: 20px;
+            padding: auto;
+            background-color: var(--third-color);
+            
+            a{
+                font-size: 20px;
+                color: black;
+    
+                &:hover{
+                    color: var(--primary-color);
+                    font-weight: bold;
+                }
+                
+            }
+        }
+
+        
+
+    }
+
+
+    // <!-- more contents 3 buttons  --> 
+
+    // .more-projects-icon{
+
+    //     span{
+           
+    //         .material-icons{
+    //             text-align: center;
+    //         }
+    //     }
+       
+
+    // }
+
+    }
+
+}
+
+
+
+// <!-- blog part --> 
+
+.blog-cta{
+
+    // <!-- blog icon for intro  --> 
+
+    .blog-cta-icon{
+        text-align: center;
+        #blog-icon{
+
+            height: 220px;
+            width: 254px;
+        }
+    }
+}
+
