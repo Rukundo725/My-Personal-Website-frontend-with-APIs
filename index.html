@@ -15,7 +15,7 @@
     <header>
         <!-- home-content  -->
 
-        <div class="home-content">
+        <div class="home-content" id="home-content">
 
             <!-- upper-content div -->
 
@@ -46,7 +46,7 @@
 
                 <nav class="nav">
                     <ul>
-                        <li><a href="#">Home</a></li>
+                        <li><a href="#home-content">Home</a></li>
                         <li><a href="#about-me">About me</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#blogs">Blogs</a></li>
@@ -106,8 +106,7 @@
 
             <div class="read-more">
 
-                <button id="read-more"><a href="#" target="_blank">Read more about my skills and experience<i class="material-icons">
-                    trending_flat</i> </a> 
+                <button id="read-more"><a href="#" target="_blank">Read more about my skills and experience</a> 
                 </button>
 
             </div>
@@ -142,8 +141,7 @@
                     </p>
                 
                     <button id="github-ink">
-                        <a href="#" target="_blank">Github-Link<i class="material-icons">
-                            trending_flat</i></a>
+                        <a href="https://github.com/Rukundo725" target="_blank">Github-Link</a>
                     </button>
                 </div>
 
@@ -160,8 +158,7 @@
                     </p>
 
                     <button id="github-ink">
-                        <a href="#" target="_blank">Github-Link<i class="material-icons">
-                            trending_flat</i></a>
+                        <a href="https://github.com/Rukundo725" target="_blank">Github-Link</a>
                     </button>
 
                 </div>
@@ -178,8 +175,7 @@
                     </p>
 
                    <button id="github-ink">
-                        <a href="#" target="_blank">Github-Link<i class="material-icons">
-                            trending_flat</i></a>
+                        <a href="https://github.com/Rukundo725" target="_blank">Github-Link</a>
                     </button>
 
                 </div>
@@ -212,11 +208,10 @@
                 <!-- left side image  -->
 
                 <div class="img-left">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
+                    <img  src="assets/dots.svg" alt=""><br><br>
+                    <img  src="assets/dots.svg" alt=""><br><br>
+                    <img  src="assets/dots.svg" alt=""><br><br>
+                    <img  src="assets/dots.svg" alt=""><br><br>
                     <img  src="assets/dots.svg" alt="">
                 </div>
 
@@ -346,14 +341,11 @@
                 <!-- right side image  -->
 
                 <div class="img-right">
+                    <img  src="assets/dots.svg" alt=""><br><br>
+                    <img  src="assets/dots.svg" alt=""><br><br>
+                    <img  src="assets/dots.svg" alt=""><br><br>
+                    <img  src="assets/dots.svg" alt=""><br><br>
                     <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    
-                    <!-- <img  src="assets/dots.svg" alt=""> -->
 
                 </div>
 
@@ -419,7 +411,7 @@
                         <div class="vl"> </div>
 
                         <span>
-                            <h2><a href="gerukundo14@gmail.com">gerukundo14@gmail.com</a></h2> 
+                            <h2><a href="mailto:gerukundo14@gmail.com" target="_blank">gerukundo14@gmail.com</a></h2> 
                         </span> 
                     </div>
 
@@ -445,11 +437,22 @@
                                 
                                 <div class="form-left-side">
     
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" placeholder="Your Name">
+                                    <div class="container">
+
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" name="name" placeholder="Your Name">
+
+                                    </div>
+
+                                    <div class="container">
+
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" placeholder="EX: email@account.com">
+                                        
+                                    </div>
+                                    
                 
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="EX: email@account.com">
+                                    
         
                                 </div>
         
@@ -505,11 +508,8 @@
 
         <hr>
 
-        <span>
-            <i class="material-icons">copyright</i>
-            <h3>2022 #Owner</h3>
-        </span>
-       
+        <h3><span class="material-icons">copyright</span>2022 #Owner</h3>
+        
     </footer>
 
 
