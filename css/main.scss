@@ -32,7 +32,8 @@ a{
 
 // .home-content
 
- .home-content {
+.home-content {
+
     display: grid;
     grid-auto-columns: minmax(auto);
     background-image: url('../assets/background image.jpeg');
@@ -118,10 +119,9 @@ a{
             
         }
     }
- }
+}
 
 //  <!-- main part -->? 
-
 .summary{
     text-align: center;
     font-family: Lato;
@@ -155,9 +155,7 @@ a{
 
     }
 
-    // <!-- read-more button  --> 
-
-    
+    // <!-- read-more button  -->
    
 }
 
@@ -213,69 +211,59 @@ a{
     // <!-- project content  --> 
 
     .project-content{
+        display:flex;
+        justify-content: space-between;
+        justify-items: center;
+        
+        // <!-- content   --> 
 
-    display:flex;
-    justify-content: space-between;
-    justify-items: center;
-    margin-bottom: 50px;
+        .container{
 
-    // <!-- content   --> 
-
-    .container{
-
-        text-align: center;
-        margin:0 30px;
-
-        #content-img{
-            height: 174px;
-            width: 262px;
-            left: 64px;
-            top: 21px;
-            border-radius: 0px;
-            
-        }
-
-        #github-ink{
-            border-radius: 20px;
-            padding: auto;
-            background-color: var(--third-color);
-            
-            a{
-                font-size: 20px;
-                color: black;
+            text-align: center;
+            margin:0 30px;
     
-                &:hover{
-                    color: var(--primary-color);
-                    font-weight: bold;
-                }
+            #content-img{
+                height: 174px;
+                width: 262px;
+                left: 64px;
+                top: 21px;
+                border-radius: 0px;
                 
             }
+
+            #github-ink{
+                border-radius: 20px;
+                padding: auto;
+                background-color: var(--third-color);
+                
+                a{
+                    font-size: 20px;
+                    color: black;
+        
+                    &:hover{
+                        color: var(--primary-color);
+                        font-weight: bold;
+                    }
+                    
+                }
+            }
+
+            
+
         }
 
-        
+
 
     }
-
-
+    
     // <!-- more contents 3 buttons  --> 
 
-    // .more-projects-icon{
-
-    //     span{
-           
-    //         .material-icons{
-    //             text-align: center;
-    //         }
-    //     }
-       
-
-    // }
-
+    .more-projects-icon{
+          text-align: center;
+          margin-bottom: 10px;
     }
 
 }
-
-
 
 // <!-- blog part --> 
 
@@ -342,6 +330,13 @@ a{
                 }
 
             }
+
+            // <!-- more contents 3 buttons  --> 
+
+            .more-articles-icon{
+                text-align: center;
+            }
+            
         }
     }
 }
@@ -382,15 +377,13 @@ a{
 
                 display: flex;
 
-                .material-icons{
-
+                .iconify{
                     margin-top: 25px;
                     padding: 2 10px;
 
                 }
 
                 .vl{
-
                     border: 1px var(--primary-color) solid;
                     margin: 0 7px;
 
@@ -418,6 +411,7 @@ a{
         .message-me{
             display: grid;
             grid-template-columns: 89% 0.1% 10%;
+            position: relative;
             
             margin-right: 150px;
           
@@ -451,30 +445,36 @@ a{
                     display: grid;
                     margin-bottom: 70px;
 
-                    .container{
-                        display: flex;
-                        float: right;
-                        margin-right: 10px;
-                        label{
-                            margin: 7px 10px 0 10px;
-                            
-                        }
+                    .container-2{
+                        margin-bottom: 105px;
+                        margin-left: 3px;
+                
                     }
                 }
 
                 .form-right-side{
                     opacity: 50%;
                     margin-bottom: 130px;
+                    margin-left: 10px;
+                    
+                    textarea{
+                        border-radius: 10px;
+                    }
 
                 }
             }
 
             .send-message-cta{
-                margin-left: 350px;
+                margin-left: 210px;
                 position: absolute;
-                top: 3250px
+                top: 120px;
+                padding: 0 170px;
+                font-weight: bold;
+                font-size: large;
                 
-                // margin-bottom: 70px;
+                &:hover{
+                    color: var(--secondary-color);
+                }
                 
             }
         }
@@ -485,6 +485,7 @@ a{
         padding: 0 20px;
         height: 40px;
         opacity: 50%;
+        border-radius: 10px;
 
         
     }
