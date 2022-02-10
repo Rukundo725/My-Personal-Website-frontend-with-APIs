@@ -15,7 +15,7 @@
     <header>
         <!-- home-content  -->
 
-        <div class="home-content">
+        <div class="home-content" id="home-content">
 
             <!-- upper-content div -->
 
@@ -46,11 +46,11 @@
 
                 <nav class="nav">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About me</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="#">contact</a></li>
+                        <li><a href="#home-content">Home</a></li>
+                        <li><a href="#about-me">About me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#blogs">Blogs</a></li>
+                        <li><a href="#contact-me-cta">contact</a></li>
                     </ul>
                 </nav>
 
@@ -66,7 +66,7 @@
 
     <main>
 
-        <div class="container">
+        <div class="container" id="about-me">
 
             <div class="summary">
                 <h1>SUMMARY</h1>
@@ -106,8 +106,7 @@
 
             <div class="read-more">
 
-                <button id="read-more"><a href="#" target="_blank">Read more about my skills and experience<i class="material-icons">
-                    trending_flat</i> </a> 
+                <button id="read-more"><a href="#" target="_blank">Read more about my skills and experience</a> 
                 </button>
 
             </div>
@@ -116,7 +115,7 @@
 
         <!-- projects part -->
 
-        <div class="projects-cta">
+        <div class="projects-cta" id="projects">
 
             <!-- project header  -->
 
@@ -142,8 +141,7 @@
                     </p>
                 
                     <button id="github-ink">
-                        <a href="#" target="_blank">Github-Link<i class="material-icons">
-                            trending_flat</i></a>
+                        <a href="https://github.com/Rukundo725" target="_blank">Github-Link</a>
                     </button>
                 </div>
 
@@ -160,8 +158,7 @@
                     </p>
 
                     <button id="github-ink">
-                        <a href="#" target="_blank">Github-Link<i class="material-icons">
-                            trending_flat</i></a>
+                        <a href="https://github.com/Rukundo725" target="_blank">Github-Link</a>
                     </button>
 
                 </div>
@@ -178,8 +175,7 @@
                     </p>
 
                    <button id="github-ink">
-                        <a href="#" target="_blank">Github-Link<i class="material-icons">
-                            trending_flat</i></a>
+                        <a href="https://github.com/Rukundo725" target="_blank">Github-Link</a>
                     </button>
 
                 </div>
@@ -198,7 +194,7 @@
 
         <!-- blog part -->
 
-        <div class="blog-cta">
+        <div class="blog-cta" id="blogs">
 
             <!-- blog icon for intro  -->
 
@@ -212,11 +208,10 @@
                 <!-- left side image  -->
 
                 <div class="img-left">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
+                    <img  src="assets/dots.svg" alt=""><br><br>
+                    <img  src="assets/dots.svg" alt=""><br><br>
+                    <img  src="assets/dots.svg" alt=""><br><br>
+                    <img  src="assets/dots.svg" alt=""><br><br>
                     <img  src="assets/dots.svg" alt="">
                 </div>
 
@@ -346,14 +341,11 @@
                 <!-- right side image  -->
 
                 <div class="img-right">
+                    <img  src="assets/dots.svg" alt=""><br><br>
+                    <img  src="assets/dots.svg" alt=""><br><br>
+                    <img  src="assets/dots.svg" alt=""><br><br>
+                    <img  src="assets/dots.svg" alt=""><br><br>
                     <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    <img  src="assets/dots.svg" alt="">
-                    
-                    <!-- <img  src="assets/dots.svg" alt=""> -->
 
                 </div>
 
@@ -363,7 +355,7 @@
 
         <!-- contact me part -->
 
-        <div class="contact-me-cta">
+        <div class="contact-me-cta" id="contact-me-cta">
 
             <!-- reach me out part  -->
 
@@ -387,8 +379,8 @@
                         <div class="vl"> </div>
 
                         <span>
-                            <h2 id="left">Kicukiro</h2>
-                            <h2>Kigali,Rwanda</h2>
+                            <h4 id="left">Kicukiro</h4>
+                            <h4>Kigali,Rwanda</h4>
                         </span> 
                     </div>
 
@@ -403,8 +395,8 @@
                         <div class="vl"> </div>
 
                         <span>
-                            <h2>+250 788992339</h2>
-                            <h2>+ 250 727091449</h2>
+                            <h4>+250 788992339</h4>
+                            <h4>+ 250 727091449</h4>
                         </span> 
                     </div>
 
@@ -419,7 +411,7 @@
                         <div class="vl"> </div>
 
                         <span>
-                            <h2><a href="gerukundo14@gmail.com">gerukundo14@gmail.com</a></h2> 
+                            <h4><a href="mailto:gerukundo14@gmail.com" target="_blank">gerukundo14@gmail.com</a></h4> 
                         </span> 
                     </div>
 
@@ -441,22 +433,37 @@
     
                         <form action="">
     
-                            <div class="form-left-side">
+                            <div class="one">
+                                
+                                <div class="form-left-side">
     
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your Name">
-            
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" placeholder="EX: email@account.com">
-    
-                            </div>
-    
-                            <div class="form-right-side">
-    
-    
-                                <!-- <label for="message"></label> -->
-                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here"></textarea>
-    
+                                    <div class="container">
+
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" name="name" placeholder="Your Name">
+
+                                    </div>
+
+                                    <div class="container">
+
+                                        <label for="email">Email</label>
+                                        <input class="email" type="email" id="email" name="email" placeholder="EX: email@account.com">
+                                        
+                                    </div>
+                                    
+                
+                                    
+        
+                                </div>
+        
+                                <div class="form-right-side">
+        
+        
+                                    <!-- <label for="message"></label> -->
+                                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your message here"></textarea>
+        
+                                </div>
+
                             </div>
         
                             <input type="submit" class="send-message-cta" value="SEND">
@@ -473,16 +480,16 @@
     
                     <div class="rigth-social-media">
     
-                        <a href="#" target="_blank"><span class="iconify" data-icon="clarity:email-outline-badged"></span>
+                        <a href="mailto:gerukundo14@gmail.com" target="_blank"><span class="iconify" data-icon="clarity:email-outline-badged"></span>
                         <a href=""></a>
     
-                        <a href="#" target="_blank"><span class="iconify" data-icon="et:linkedin" ></span>
+                        <a href="https://www.linkedin.com/in/rukundo-germain-9111bb166" target="_blank"><span class="iconify" data-icon="et:linkedin" ></span>
                         <a href=""></a>
     
-                        <a href="#" target="_blank"><span class="iconify" data-icon="akar-icons:github-outline-fill" ></span>
+                        <a href="https://github.com/Rukundo725" target="_blank"><span class="iconify" data-icon="akar-icons:github-outline-fill" ></span>
                         <a href=""></a>
     
-                        <a href="#" target="_blank"> <span class="iconify" data-icon="et:twitter" ></span>
+                        <a href="https://twitter.com/OWNER_G_" target="_blank"> <span class="iconify" data-icon="et:twitter" ></span>
                         <a href=""></a>
     
                     </div>
@@ -501,11 +508,8 @@
 
         <hr>
 
-        <span>
-            <i class="material-icons">copyright</i>
-            <h3>2022 #Owner</h3>
-        </span>
-       
+        <h3><span class="material-icons">copyright</span>2022 #Owner</h3>
+        
     </footer>
 
 
