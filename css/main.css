@@ -306,4 +306,56 @@ a:hover {
 .contact-me-cta .reach-me-out .address .container span #left {
   float: left;
 }
+
+.contact-me-cta .massage-me-cta {
+  text-align: center;
+}
+
+.contact-me-cta .massage-me-cta .message-me {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 86% 4% 10%;
+      grid-template-columns: 86% 4% 10%;
+}
+
+.contact-me-cta .massage-me-cta .message-me .btn-message-social-media-vl {
+  border: 1px var(--primary-color) solid;
+  margin: 0 7px;
+}
+
+.contact-me-cta .massage-me-cta .message-me .rigth-social-media {
+  display: -ms-grid;
+  display: grid;
+}
+
+.contact-me-cta .massage-me-cta .message-me .one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+}
+
+.contact-me-cta .massage-me-cta .message-me .one .form-left-side {
+  display: -ms-grid;
+  display: grid;
+  border: 1px red solid;
+}
+
+.contact-me-cta .massage-me-cta .message-me .one .form-left-side .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px yellow solid;
+  float: right;
+}
+
+input {
+  width: 400px;
+  padding: 0 20px;
+  height: 50px;
+}
+
+footer {
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */

@@ -413,7 +413,70 @@ a{
     }
 
     // <!-- message-me part  --> 
+
+    .massage-me-cta{
+        text-align: center;
+
+        .message-me{
+            display: grid;
+            grid-template-columns: 86% 4% 10%;
+
+            // <!-- verticle line  --> 
+            
+            .btn-message-social-media-vl{
+                border: 1px var(--primary-color) solid;
+                    margin: 0 7px;
+
+            }
+            
+            // <!-- right side of the message social media icons  --> 
+
+            .rigth-social-media{
+                display: grid;
+            }
+
+            .one{
+                display: flex;
+                // justify-content: space-between;
+                // margin-right: 150px;
+                
+                // margin-left: 200px;
+                float: right;
+
+                .form-left-side{
+                    display: grid;
+                    border: 1px red solid;
+
+                    .container{
+                        display: flex;
+                        border: 1px yellow solid;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+ 
     
+
+}
+
+input {
+    width: 400px;
+    padding: 0 20px;
+    height: 50px;
+}
+
+// input,
+// input::-webkit-input-placeholder {
+//     font-size: 20px;
+//     line-height: 3;
+// }
+
+// footer
+
+footer{
+    text-align: center;
 }
 
 
