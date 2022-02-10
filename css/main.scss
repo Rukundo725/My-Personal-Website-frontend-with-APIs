@@ -293,11 +293,8 @@ a{
     }
 
     .container{
-        // display: flex;
         display: grid;
-        // grid-template-columns: 1fr 2fr 1fr;
         grid-template-columns: 20% 60% 20%;
-        // border: 2px red solid;
 
         // <!-- articles  --> 
 
@@ -401,7 +398,8 @@ a{
 
                 span{
                     color: var(--primary-color);
-                    font-size: xx-small;
+                    font-size: small;
+                    font-weight: lighter;
 
                     #left{
                         float: left;
@@ -419,13 +417,16 @@ a{
 
         .message-me{
             display: grid;
-            grid-template-columns: 86% 4% 10%;
-
+            grid-template-columns: 89% 0.1% 10%;
+            
+            margin-right: 150px;
+          
             // <!-- verticle line  --> 
             
             .btn-message-social-media-vl{
                 border: 1px var(--primary-color) solid;
-                    margin: 0 7px;
+                    margin: 0 30px;
+                    margin-bottom: 70px;
 
             }
             
@@ -433,47 +434,62 @@ a{
 
             .rigth-social-media{
                 display: grid;
+                margin-bottom: 50px;
+
+                .iconify{
+                    height: 35px;
+                    width: 35px;
+                }
             }
 
             .one{
                 display: flex;
-                // justify-content: space-between;
-                // margin-right: 150px;
-                
-                // margin-left: 200px;
+               
                 float: right;
 
                 .form-left-side{
                     display: grid;
-                    border: 1px red solid;
+                    margin-bottom: 70px;
 
                     .container{
                         display: flex;
-                        border: 1px yellow solid;
                         float: right;
+                        margin-right: 10px;
+                        label{
+                            margin: 7px 10px 0 10px;
+                            
+                        }
                     }
                 }
+
+                .form-right-side{
+                    opacity: 50%;
+                    margin-bottom: 130px;
+
+                }
+            }
+
+            .send-message-cta{
+                margin-left: 350px;
+                position: absolute;
+                top: 3250px
+                
+                // margin-bottom: 70px;
+                
             }
         }
     }
  
+    input {
+        width: 300px;
+        padding: 0 20px;
+        height: 40px;
+        opacity: 50%;
+
+        
+    }
     
-
 }
-
-input {
-    width: 400px;
-    padding: 0 20px;
-    height: 50px;
-}
-
-// input,
-// input::-webkit-input-placeholder {
-//     font-size: 20px;
-//     line-height: 3;
-// }
-
-// footer
 
 footer{
     text-align: center;

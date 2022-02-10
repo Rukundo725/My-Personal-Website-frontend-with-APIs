@@ -300,7 +300,8 @@ a:hover {
 
 .contact-me-cta .reach-me-out .address .container span {
   color: var(--primary-color);
-  font-size: xx-small;
+  font-size: small;
+  font-weight: lighter;
 }
 
 .contact-me-cta .reach-me-out .address .container span #left {
@@ -314,18 +315,26 @@ a:hover {
 .contact-me-cta .massage-me-cta .message-me {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 86% 4% 10%;
-      grid-template-columns: 86% 4% 10%;
+  -ms-grid-columns: 89% 0.1% 10%;
+      grid-template-columns: 89% 0.1% 10%;
+  margin-right: 150px;
 }
 
 .contact-me-cta .massage-me-cta .message-me .btn-message-social-media-vl {
   border: 1px var(--primary-color) solid;
-  margin: 0 7px;
+  margin: 0 30px;
+  margin-bottom: 70px;
 }
 
 .contact-me-cta .massage-me-cta .message-me .rigth-social-media {
   display: -ms-grid;
   display: grid;
+  margin-bottom: 50px;
+}
+
+.contact-me-cta .massage-me-cta .message-me .rigth-social-media .iconify {
+  height: 35px;
+  width: 35px;
 }
 
 .contact-me-cta .massage-me-cta .message-me .one {
@@ -338,21 +347,37 @@ a:hover {
 .contact-me-cta .massage-me-cta .message-me .one .form-left-side {
   display: -ms-grid;
   display: grid;
-  border: 1px red solid;
+  margin-bottom: 70px;
 }
 
 .contact-me-cta .massage-me-cta .message-me .one .form-left-side .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px yellow solid;
   float: right;
+  margin-right: 10px;
 }
 
-input {
-  width: 400px;
+.contact-me-cta .massage-me-cta .message-me .one .form-left-side .container label {
+  margin: 7px 10px 0 10px;
+}
+
+.contact-me-cta .massage-me-cta .message-me .one .form-right-side {
+  opacity: 50%;
+  margin-bottom: 130px;
+}
+
+.contact-me-cta .massage-me-cta .message-me .send-message-cta {
+  margin-left: 350px;
+  position: absolute;
+  top: 3250px;
+}
+
+.contact-me-cta input {
+  width: 300px;
   padding: 0 20px;
-  height: 50px;
+  height: 40px;
+  opacity: 50%;
 }
 
 footer {
