@@ -533,4 +533,172 @@ footer{
   background-color: #0C1D26;
 }
 
+@media screen and (max-width: 800px) {
+    body{
+        width: 800px;
+
+    }
+
+    // .home-content
+
+    .home-content {
+
+        display: grid;
+        grid-auto-columns: minmax(auto);
+        background-image: url('../assets/background image.jpeg');
+        background-size: cover;
+        background-size: 800px 512px ;
+        // .upper-content 
+
+        .upper-content{
+            display: grid;
+
+        
+        }
+
+        // .lower-content 
+
+        .lower-content{
+
+
+            #big-line{
+                display: none;
+            }
+
+            // all lines 
+
+            hr {
+                display: none;
+
+            }
+            
+            // nav content 
+
+            ul{
+                display:none;
+                // display: grid;
+                list-style-type: none; 
+                margin-left: 300px;
+                margin-right: 300px;
+                text-transform: capitalize;
+
+                
+            }
+        }
+    }
+    
+    .projects-cta{
+        .project-content{
+            display:grid;
+
+            button{
+                margin-bottom: 30px;
+            }
+    
+        }
+
+    }
+
+    .blog-cta{
+
+        // <!-- blog icon for intro  --> 
+    
+        .container{
+            display: flex;
+    
+            // <!-- articles  --> 
+            .img-left, .img-right{
+                display: none;
+            }
+        }
+    }
+
+    .contact-me-cta{
+
+        // <!-- reach me out part  --> 
+    
+        .reach-me-out{
+    
+            // <!-- contact info  --> 
+    
+            .address{
+    
+                // <!--  info  --> 
+                display: grid;
+
+                .container{
+    
+                    display: flex;
+                    justify-content: space-between;
+                    .vl{
+                        display: none;
+                    }
+                    
+                }
+            }
+    
+        }
+    
+        // <!-- message-me part  --> 
+    
+        .massage-me-cta{
+            text-align: center;
+            display: grid;
+            grid-template-rows: 10% 90%;
+    
+            .message-me{
+                display: grid;
+                grid-template-rows: 70% 30%;
+                margin-top: 20px;
+                margin-left: 50px;
+              
+                // <!-- verticle line  --> 
+                
+                .btn-message-social-media-vl{
+                    display: none;
+                }
+    
+                .container{
+                    
+                    form{
+                        display: grid;
+                        justify-content: end;
+                      
+
+                        .one{
+
+                            padding-right: 10px;
+                            margin-top: 20px;
+                            .form-right-side{
+                                textarea{
+                                    border-radius: 0px;
+                                    margin-bottom: 50px;
+                                }
+        
+                            }
+                        }
+                        .send-message-cta{
+                            padding: 0 200px;
+                            margin-right: 15px;  
+                            
+                        }
+                    }
+                }
+    
+    
+            }
+        }
+     
+        input {
+            width: 100px;
+            padding: 0 20px;
+            height: 30px;
+            opacity: 50%;
+            border-radius: 0px;
+    
+            
+        }
+        
+    }
+}
 

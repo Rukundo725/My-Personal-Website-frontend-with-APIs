@@ -432,4 +432,109 @@ footer {
   overflow: hidden;
   background-color: #0C1D26;
 }
+
+@media screen and (max-width: 800px) {
+  body {
+    width: 800px;
+  }
+  .home-content {
+    display: -ms-grid;
+    display: grid;
+    grid-auto-columns: minmax(auto);
+    background-image: url("../assets/background image.jpeg");
+    background-size: cover;
+    background-size: 800px 512px;
+  }
+  .home-content .upper-content {
+    display: -ms-grid;
+    display: grid;
+  }
+  .home-content .lower-content #big-line {
+    display: none;
+  }
+  .home-content .lower-content hr {
+    display: none;
+  }
+  .home-content .lower-content ul {
+    display: none;
+    list-style-type: none;
+    margin-left: 300px;
+    margin-right: 300px;
+    text-transform: capitalize;
+  }
+  .projects-cta .project-content {
+    display: -ms-grid;
+    display: grid;
+  }
+  .projects-cta .project-content button {
+    margin-bottom: 30px;
+  }
+  .blog-cta .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .blog-cta .container .img-left, .blog-cta .container .img-right {
+    display: none;
+  }
+  .contact-me-cta .reach-me-out .address {
+    display: -ms-grid;
+    display: grid;
+  }
+  .contact-me-cta .reach-me-out .address .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .contact-me-cta .reach-me-out .address .container .vl {
+    display: none;
+  }
+  .contact-me-cta .massage-me-cta {
+    text-align: center;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 10% 90%;
+        grid-template-rows: 10% 90%;
+  }
+  .contact-me-cta .massage-me-cta .message-me {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 70% 30%;
+        grid-template-rows: 70% 30%;
+    margin-top: 20px;
+    margin-left: 50px;
+  }
+  .contact-me-cta .massage-me-cta .message-me .btn-message-social-media-vl {
+    display: none;
+  }
+  .contact-me-cta .massage-me-cta .message-me .container form {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .contact-me-cta .massage-me-cta .message-me .container form .one {
+    padding-right: 10px;
+    margin-top: 20px;
+  }
+  .contact-me-cta .massage-me-cta .message-me .container form .one .form-right-side textarea {
+    border-radius: 0px;
+    margin-bottom: 50px;
+  }
+  .contact-me-cta .massage-me-cta .message-me .container form .send-message-cta {
+    padding: 0 200px;
+    margin-right: 15px;
+  }
+  .contact-me-cta input {
+    width: 100px;
+    padding: 0 20px;
+    height: 30px;
+    opacity: 50%;
+    border-radius: 0px;
+  }
+}
 /*# sourceMappingURL=main.css.map */
