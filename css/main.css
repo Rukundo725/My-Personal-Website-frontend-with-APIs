@@ -45,16 +45,25 @@ a:active {
 .home-content .upper-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
+  -ms-grid-columns: 1fr 2fr 0.5fr;
+      grid-template-columns: 1fr 2fr 0.5fr;
 }
 
-.home-content .upper-content img {
+.home-content .upper-content .logo img {
   float: right;
   height: 254px;
   width: 254px;
   border-radius: 50%;
   margin: 30px;
+}
+
+.home-content .upper-content .mobile-cta {
+  display: none;
+  float: right;
+  height: 25px;
+  width: 25px;
+  margin: 15px 10px;
+  cursor: pointer;
 }
 
 .home-content .upper-content .introduction {
@@ -439,10 +448,16 @@ footer {
     background-size: cover;
     background-size: 800px 320px;
     height: 40vh;
+    position: relative;
+    width: 100%;
   }
-  .home-content .upper-content {
-    display: -ms-grid;
-    display: grid;
+  .home-content .upper-content .mobile-cta {
+    display: block;
+    float: right;
+    height: 25px;
+    width: 25px;
+    margin: 15px 10px;
+    cursor: pointer;
   }
   .home-content .upper-content .logo img {
     width: 125px;
@@ -462,12 +477,19 @@ footer {
   .home-content .lower-content hr {
     display: none;
   }
-  .home-content .lower-content ul {
+  .home-content .lower-content nav {
     display: none;
+    background: #0C1D26;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+  }
+  .home-content .lower-content nav ul {
+    display: -ms-grid;
+    display: grid;
     list-style-type: none;
-    margin-left: 300px;
-    margin-right: 300px;
     text-transform: capitalize;
+    margin: 0;
   }
   main {
     margin: 0 10px;
