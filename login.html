@@ -5,30 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
-    <link rel="stylesheet" href="css/main.css">
+    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link rel="stylesheet" href="css/log_in.css">
     <title>log_in</title>
 </head>
 <body>
    
     <main>
         <div class="container">
-            <span class="iconify" data-icon="bx:arrow-back" style="color: #59cea7;"></span>
+            <a href="index.html"><span class="iconify" data-icon="bx:arrow-back" style="color: #59cea7;"></span></a>
             <div class="content">
                 <img id="logo" src="assets/MY LOGO.jpg" alt="My logo">
                 <form action="">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Your Name">
+                  
+                    <input type="text" id="name" name="name" placeholder="Username or E-maill">
 
-                    <label for="email">Email</label>
-                    <input class="email" type="email" id="email" name="email" placeholder="EX: email@account.com">
+                   
+                    <input class="passowrd" type="password" id="password" name="password" placeholder="password">
+                    <span class="iconify" data-icon="ei:eye" data-width="25"></span>
 
                     <input type="submit" class="send-message-cta" value="LOG IN">
                 </form>
                 <div class="remember-forget">
-                    <span class="iconify" data-icon="ic:round-check-box-outline-blank" style="color: white;"></span>
-                    <h3>Remember me</h3>
-                    <span class="iconify" data-icon="emojione-v1:ballot-box-bold-check" style="color: white;" data-width="24"></span>
-                    <h3>Forgot passowrd?</h3>
+                    <div class="container">
+                        <span id="blank" class="iconify" data-icon="ic:round-check-box-outline-blank" style="color: white;"></span>
+                        <span id="check" class="iconify" data-icon="emojione-v1:ballot-box-bold-check" style="color: white;" data-width="24"></span>
+                        <h3>Remember me</h3>
+                    </div>
+                    <div class="container forgot-password">
+                        <h3>Forgot passowrd?</h3>
+                    </div>
                 </div>
             </div>
         </div>

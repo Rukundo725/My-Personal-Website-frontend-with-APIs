@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color:#59CEA7;
+    --third-color: #4AA6F1;
+
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: #0C1D26;
+    font-family: 'Poppins';
+    width: 100%;
+    color: var(--primary-color);
+    // background-image: url("../assets/login-background.jpeg");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* the gradient on top, adjust color and opacity to your taste */
+    url("../assets/login-background.jpeg");
+  
+    // filter: brightness(50%);
+    background-size: cover;
+
+}
+main{
+    margin: 0 50px;
+}
+.container{
+ display: grid;
+ grid-template-columns: 5% 95%; 
+
+
+
+ .iconify{
+     width: 45px;
+     height: 45px;
+     cursor: pointer;
+    //  border: green 1px solid;
+    }
+    
+ 
+
+ .content{
+    //  border: 1px red solid;
+    //  display: grid;
+     text-align: center;
+     margin-top: 50px;
+
+     #logo{
+         border-radius: 50%;
+        }
+
+        form{
+            display: grid;
+            // padding: 30px;
+            margin: 20px 320px;
+            position: relative;
+
+            input{
+                margin-bottom: 20px;
+                padding: 10px;
+                border-radius: 50px;
+                cursor: pointer;
+                background-color: rgba(189, 236, 220, 0.5);
+                
+            }
+
+            .iconify{
+
+                position: absolute;
+                left: 490px;
+                top: 55px;
+               
+            }
+        }
+
+        .remember-forget{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 320px;
+
+            .container{
+                display: flex;
+                
+                // border: red 1px solid;
+                
+
+                #check{
+                    display: none;
+                }
+
+                
+            }
+
+            .forgot-password{
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+footer{
+    text-align: center;
+}

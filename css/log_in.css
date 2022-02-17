@@ -1,1 +1,95 @@
-/* No CSS *//*# sourceMappingURL=log_in.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+:root {
+  --primary-color: #FFFFFF;
+  --secondary-color:#59CEA7;
+  --third-color: #4AA6F1;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #0C1D26;
+  font-family: 'Poppins';
+  width: 100%;
+  color: var(--primary-color);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/login-background.jpeg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/login-background.jpeg");
+  background-size: cover;
+}
+
+main {
+  margin: 0 50px;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 95%;
+      grid-template-columns: 5% 95%;
+}
+
+.container .iconify {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.container .content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.container .content #logo {
+  border-radius: 50%;
+}
+
+.container .content form {
+  display: -ms-grid;
+  display: grid;
+  margin: 20px 320px;
+  position: relative;
+}
+
+.container .content form input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: rgba(189, 236, 220, 0.5);
+}
+
+.container .content form .iconify {
+  position: absolute;
+  left: 490px;
+  top: 55px;
+}
+
+.container .content .remember-forget {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 320px;
+}
+
+.container .content .remember-forget .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .content .remember-forget .container #check {
+  display: none;
+}
+
+.container .content .remember-forget .forgot-password {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+}
+/*# sourceMappingURL=log_in.css.map */
