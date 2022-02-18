@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+:root {
+  --primary-color: #FFFFFF;
+  --secondary-color:#59CEA7;
+  --third-color: #4AA6F1;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #0C1D26;
+  font-family: 'Poppins';
+  width: 100%;
+  height: 100%;
+  color: var(--primary-color);
+  display: -ms-grid;
+  display: grid;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+a:active {
+  color: var(--third-color);
+}
+
+header .nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr;
+      grid-template-columns: 1fr 4fr;
+  background: #0C1D26;
+  position: fixed;
+  width: 100%;
+}
+
+header .nav .logo img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  margin: 10px;
+}
+
+header .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 170px;
+  list-style: none;
+}
+
+main {
+  margin: 100px 30px 0 30px;
+}
+
+main article {
+  display: -ms-grid;
+  display: grid;
+}
+
+main article .article-img img {
+  height: 284px;
+  width: 412px;
+}
+
+main article .article-content .date-comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--secondary-color);
+}
+
+main article .article-content .date-comment .date {
+  margin-right: 50px;
+}
+
+main article .article-content form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main article .article-content form textarea {
+  height: 30px;
+}
+
+main article .article-content form .send-comment-cta {
+  cursor: pointer;
+}
+
+main .comments-list h5 {
+  color: var(--third-color);
+}
+
+footer {
+  text-align: center;
+}
+/*# sourceMappingURL=blog.css.map */
