@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
     <link rel="stylesheet" href="css/dashboard.css">
     <title>Dashboard</title>
 </head>
@@ -20,19 +21,19 @@
 
                 <div class="content" id="articles">
                     <span class="iconify" data-icon="ic:baseline-article"></span>
-                    <h3>Articles</h3>
+                    <a href="#"><h3>Articles</h3></a>
                     <p id="count">25</p>
                 </div>
 
                 <div class="content" id="messages">
                     <span class="iconify" data-icon="mdi:android-messages"></span>
-                    <h3>Messages</h3>
+                    <a href="#"><h3>Messages</h3></a>
                     <p id="count">25</p>
                 </div>
 
                 <div class="content" id="projects">
                     <span class="iconify" data-icon="eos-icons:project"></span>
-                    <h3>Projects</h3>
+                    <a href="#"><h3>Projects</h3></a>
                     <p id="count">25</p>
                 </div>
 
@@ -50,8 +51,10 @@
             <div class="upper-content">
 
                 <div class="search">
-                    <span class="iconify" data-icon="fa-solid:search"></span>
+                    <!-- <span class="iconify" data-icon="fa-solid:search"></span> -->
+                    
                     <textarea name="search" id="search" cols="30" rows="10"></textarea>
+                    <span class="iconify" data-icon="icons8:search"></span>
                 </div>
 
                 <div class="add-article">
@@ -99,8 +102,8 @@
                     </article>
 
                     <div class="edit-delete">
-                        <span class="iconify" data-icon="entypo:edit"></span>
-                        <span class="iconify" data-icon="fluent:delete-28-filled"></span>
+                        <span class="iconify" id="edit" data-icon="entypo:edit"></span>
+                        <span class="iconify" id="delete" data-icon="fluent:delete-28-filled"></span>
                     </div>
 
                 </div>
@@ -142,8 +145,8 @@
                     </article>
 
                     <div class="edit-delete">
-                        <span class="iconify" data-icon="entypo:edit"></span>
-                        <span class="iconify" data-icon="fluent:delete-28-filled"></span>
+                        <span class="iconify" id="edit" data-icon="entypo:edit"></span>
+                        <span class="iconify" id="delete" data-icon="fluent:delete-28-filled"></span>
                     </div>
 
                 </div>
@@ -185,8 +188,8 @@
                     </article>
 
                     <div class="edit-delete">
-                        <span class="iconify" data-icon="entypo:edit"></span>
-                        <span class="iconify" data-icon="fluent:delete-28-filled"></span>
+                        <span class="iconify" id="edit" data-icon="entypo:edit"></span>
+                        <span class="iconify" id="delete" data-icon="fluent:delete-28-filled"></span>
                     </div>
 
                 </div>

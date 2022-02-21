@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color:#59CEA7;
+    --third-color:rgba(5, 21, 49, 0.94);
+    ;
+
+}
+body{
+    padding: 0;
+    margin: 0;
+    // background: var(--third-color);
+    font-family: 'Poppins';
+    
+}
+main{
+   
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    // position: relative;
+
+    .left-side{
+
+        color: var(--primary-color);
+        background: var(--third-color);
+        // position: fixed;
+        // width: 35.5%;
+        // height: 650px;
+
+        .upper-content{
+         background:rgba(11, 5, 49, 0.25);
+         text-align: center;
+         height: 80px;
+         margin-top: -20px;
+
+            h1{
+                padding-top: 15px;
+            }
+
+        }
+
+        .lower-content{
+            text-align: center;
+            margin: 20px;
+            display: grid;
+
+            .content{
+                display: flex;
+                margin-bottom: 20px;
+                margin-left: 80px;
+
+                .iconify{
+                    width: 45px;
+                    height: 45px;
+                    margin-right: 10px;
+                }
+
+                a{
+                    margin-right: 10px;
+                    color: var(--primary-color);
+                    text-decoration: none;
+                    &:hover{
+                        color: var(--secondary-color);
+                    }
+                }
+
+                p{
+                    color: var(--secondary-color);
+                }
+            }
+
+            #log-out{
+                color: var(--secondary-color);
+                h3{
+                    cursor: pointer;
+                    &:hover{
+                    color: var(--primary-color);
+                    }
+                }
+            }
+        }
+       
+    }
+
+    .right-side{
+       background-color: var(--primary-color);
+       text-align: center;
+       display: grid;
+
+       .upper-content{
+            display: flex;
+            justify-content: space-between;
+            background: rgba(11, 5, 49, 0.25);
+            padding-bottom: 15px;
+            .iconify{
+                width: 40px;
+                height: 40px;
+
+                &:hover{
+                    color: var(--primary-color);
+                    cursor: pointer;
+                }
+            }
+
+            .search{
+                margin-top: 10px;
+                margin-left: 10px;
+                textarea {
+                    height: 20px;
+                    border-radius: 50px;
+                    padding: 5px 10px;
+                    // margin-top: -60px;
+                }
+            } 
+
+            .add-article{
+                margin-right: 10px;
+
+                .iconify{
+                    width: 50px;
+                    height: 50px;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        .lower-content{
+
+            .container{
+                display: grid;
+                margin: 10px 80px;
+
+                article{
+
+                    display: flex;
+    
+                    #article-img{
+                        height: 173px;
+                        width: 173px;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        margin-top: 30px;
+        
+                    }
+    
+                    .article-content{
+                        span{
+                            
+                            a{
+                                color: var(--secondary-color);
+                                text-decoration: none;
+    
+                                &:hover{
+                                    color: var(--third-color);
+                                }
+                            }
+                        }
+                    }
+    
+                    .date-comment{
+                        display: flex;
+                        color: var(--secondary-color);
+                        justify-content: center;
+                        
+    
+                    }
+    
+                    .date{
+                        margin-right: 100px;
+                    }
+    
+                }
+
+                .edit-delete{
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0 150px;
+
+                    .iconify{
+                        width: 35px;
+                        height: 35px;
+                        margin: 10px;
+                        cursor: pointer;
+
+                    }
+
+                    #edit{
+                        margin-left: 200px;
+                        &:hover{
+                            color: var(--secondary-color);
+                        }
+                    }
+                    #delete{
+                        &:hover{
+                            color: red;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
