@@ -2,7 +2,7 @@
 :root {
   --primary-color: #FFFFFF;
   --secondary-color:#59CEA7;
-  --third-color: #4AA6F1;
+  --third-color: #4aa6f1;
 }
 
 body {
@@ -148,24 +148,20 @@ a:active {
   text-align: center;
 }
 
-.read-more #read-more {
-  border-radius: 20px;
-  padding: auto;
-  background-color: var(--third-color);
-}
-
-.read-more #read-more a {
+.read-more a {
   font-size: 20px;
-  color: black;
-}
-
-.read-more #read-more a:hover {
-  color: var(--primary-color);
   font-weight: bold;
+  color: var(--secondary-color);
 }
 
-.read-more #read-more a:active {
-  color: var(--secondary-color);
+.read-more a:hover {
+  color: var(--third-color);
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.read-more a:active {
+  color: var(--primary-color);
 }
 
 .projects-cta .project-cta-icon {
@@ -204,24 +200,20 @@ a:active {
   width: 262px;
 }
 
-.projects-cta .project-content .container #github-ink {
-  border-radius: 20px;
-  padding: auto;
-  background-color: var(--third-color);
-}
-
-.projects-cta .project-content .container #github-ink a {
+.projects-cta .project-content .container a {
   font-size: 20px;
-  color: black;
-}
-
-.projects-cta .project-content .container #github-ink a:hover {
-  color: var(--primary-color);
   font-weight: bold;
+  color: var(--secondary-color);
 }
 
-.projects-cta .project-content .container #github-ink a:active {
-  color: var(--secondary-color);
+.projects-cta .project-content .container a:hover {
+  color: var(--third-color);
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.projects-cta .project-content .container a:active {
+  color: var(--primary-color);
 }
 
 .projects-cta .more-projects-icon {
@@ -265,11 +257,11 @@ a:active {
 }
 
 .blog-cta .container .article-container article .article-content span a {
-  color: var(--secondary-color);
+  color: var(--third-color);
 }
 
 .blog-cta .container .article-container article .article-content span a:hover {
-  color: var(--third-color);
+  color: var(--secondary-color);
 }
 
 .blog-cta .container .article-container article .date-comment {
