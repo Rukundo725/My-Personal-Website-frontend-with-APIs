@@ -14,9 +14,9 @@ body {
 main {
   display: -ms-grid;
   display: grid;
+  width: 100%;
   -ms-grid-columns: 1fr 2fr;
       grid-template-columns: 1fr 2fr;
-  position: relative;
 }
 
 main .left-side {
@@ -132,11 +132,11 @@ main .right-side .upper-content .search textarea {
   padding: 5px 10px;
 }
 
-main .right-side .upper-content .add-article {
+main .right-side .upper-content .add-project {
   margin-right: 10px;
 }
 
-main .right-side .upper-content .add-article .iconify {
+main .right-side .upper-content .add-project .iconify {
   width: 50px;
   height: 50px;
   margin-top: 5px;
@@ -149,7 +149,7 @@ main .right-side .lower-content {
 main .right-side .lower-content .container {
   display: -ms-grid;
   display: grid;
-  margin-left: 20px;
+  margin: 10px;
 }
 
 main .right-side .lower-content .container article {
@@ -158,35 +158,20 @@ main .right-side .lower-content .container article {
   display: flex;
 }
 
-main .right-side .lower-content .container article #article-img {
-  height: 173px;
-  width: 173px;
-  border-radius: 50%;
+main .right-side .lower-content .container article #project-img {
+  height: 174px;
+  width: 262px;
   margin-right: 10px;
   margin-top: 30px;
 }
 
-main .right-side .lower-content .container article .article-content span a {
+main .right-side .lower-content .container article .project-content a {
   color: var(--secondary-color);
   text-decoration: none;
 }
 
-main .right-side .lower-content .container article .article-content span a:hover {
+main .right-side .lower-content .container article .project-content a:hover {
   color: var(--third-color);
-}
-
-main .right-side .lower-content .container article .date-comment {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  color: var(--secondary-color);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-main .right-side .lower-content .container article .date {
-  margin-right: 100px;
 }
 
 main .right-side .lower-content .container .edit-delete {
@@ -206,14 +191,18 @@ main .right-side .lower-content .container .edit-delete .iconify {
 }
 
 main .right-side .lower-content .container .edit-delete #edit {
-  margin-left: 200px;
+  margin-left: 260px;
 }
 
 main .right-side .lower-content .container .edit-delete #edit:hover {
   color: var(--secondary-color);
 }
 
+main .right-side .lower-content .container .edit-delete #delete {
+  margin-right: 50px;
+}
+
 main .right-side .lower-content .container .edit-delete #delete:hover {
   color: red;
 }
-/*# sourceMappingURL=dashboard.css.map */
+/*# sourceMappingURL=dash-projects.css.map */

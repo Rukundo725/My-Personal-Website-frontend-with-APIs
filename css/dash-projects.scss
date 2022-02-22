@@ -10,15 +10,14 @@
 body{
     padding: 0;
     margin: 0;
-    // background: var(--third-color);
     font-family: 'Poppins';
     
 }
 main{
    
     display: grid;
+    width: 100%;
     grid-template-columns: 1fr 2fr;
-    position: relative;
 
     .left-side{
 
@@ -122,7 +121,7 @@ main{
                 }
             } 
 
-            .add-article{
+            .add-project{
                 margin-right: 10px;
 
                 .iconify{
@@ -140,53 +139,37 @@ main{
             
             .container{
                 display: grid;
-                margin-left: 20px;
+                margin: 10px;
 
                 article{
 
                     display: flex;
     
-                    #article-img{
-                        height: 173px;
-                        width: 173px;
-                        border-radius: 50%;
+                    #project-img{
+                        height: 174px;
+                        width: 262px;
                         margin-right: 10px;
                         margin-top: 30px;
         
                     }
     
-                    .article-content{
-                        span{
-                            
-                            a{
-                                color: var(--secondary-color);
-                                text-decoration: none;
-    
-                                &:hover{
-                                    color: var(--third-color);
-                                }
+                    .project-content{
+
+                        a{
+                            color: var(--secondary-color);
+                            text-decoration: none;
+
+                            &:hover{
+                                color: var(--third-color);
                             }
                         }
-                    }
-    
-                    .date-comment{
-                        display: flex;
-                        color: var(--secondary-color);
-                        justify-content: center;
                         
-    
                     }
-    
-                    .date{
-                        margin-right: 100px;
-                    }
-    
                 }
 
                 .edit-delete{
                     display: flex;
                     justify-content: space-between;
-                    // margin: 0 180px;
 
                     .iconify{
                         width: 35px;
@@ -197,12 +180,13 @@ main{
                     }
 
                     #edit{
-                        margin-left: 200px;
+                        margin-left: 260px;
                         &:hover{
                             color: var(--secondary-color);
                         }
                     }
                     #delete{
+                        margin-right: 50px;
                         &:hover{
                             color: red;
                         }
