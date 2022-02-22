@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #FFFFFF;
+    --secondary-color:#59CEA7;
+    --third-color:rgba(5, 21, 49, 0.94);
+    ;
+
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+    
+}
+main{
+   
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr;
+
+    .left-side{
+
+        color: var(--primary-color);
+        background: var(--third-color);
+        position: fixed;
+        width: 35.5%;
+        height: 650px;
+
+        .upper-content{
+         background:rgba(11, 5, 49, 0.25);
+         text-align: center;
+         height: 80px;
+         margin-top: -20px;
+
+            h1{
+                padding-top: 15px;
+            }
+
+        }
+
+        .lower-content{
+            text-align: center;
+            margin: 20px;
+            display: grid;
+
+            .content{
+                display: flex;
+                margin-bottom: 20px;
+                margin-left: 80px;
+
+                &:active{
+                    color:var(--secondary-color)
+                }
+
+                .iconify{
+                    width: 45px;
+                    height: 45px;
+                    margin-right: 10px;
+                }
+
+                a{
+                    margin-right: 10px;
+                    color: var(--primary-color);
+                    text-decoration: none;
+                    &:hover{
+                        color: var(--secondary-color);
+                    }
+                }
+
+                p{
+                    color: var(--secondary-color);
+                }
+            }
+
+            #log-out{
+                color: var(--secondary-color);
+                h3{
+                    cursor: pointer;
+                    &:hover{
+                    color: var(--primary-color);
+                    }
+                }
+            }
+        }
+       
+    }
+
+    .right-side{
+       background-color: var(--primary-color);
+       text-align: center;
+       
+       width: 96%;
+       margin-left: 480px;
+
+       .upper-content{
+            background: rgb(240, 239, 239);
+            position: fixed;
+            width: 64.5%;
+        }
+
+        .lower-content{
+
+            margin-top: 80px;
+           
+            .container{
+                display: grid;
+                grid-template-columns: 0.5fr 1fr 1.5fr;
+                margin: 10px;
+            }
+        }
+    }
+}
