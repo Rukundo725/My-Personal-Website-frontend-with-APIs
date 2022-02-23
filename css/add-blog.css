@@ -59,69 +59,51 @@ header .nav ul {
 }
 
 main {
-  margin: 100px 200px 0 200px;
+  margin: 50px 200px;
   background: #20333d;
   text-align: center;
 }
 
-main article {
-  display: -ms-grid;
-  display: grid;
-  margin: 0 50px;
-  gap: 10px;
+main .iconify {
+  width: 45px;
+  height: 45px;
 }
 
-main article .article-img {
+main form {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  margin: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main form .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+}
+
+main form .container label {
+  margin-right: 20px;
   margin-top: 20px;
 }
 
-main article .article-img img {
-  height: 284px;
-  width: 812px;
-}
-
-main article .article-content .date-comment {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  color: var(--secondary-color);
-}
-
-main article .article-content .date-comment .date {
-  margin-right: 50px;
-}
-
-main article .article-content form {
-  display: -ms-grid;
-  display: grid;
-  gap: 10px;
-}
-
-main article .article-content form textarea {
-  height: 30px;
-}
-
-main article .article-content form .send-comment-cta {
+main form .select-img {
+  margin-top: 10px;
   cursor: pointer;
 }
 
-main article .article-content p {
-  text-align: left;
+main form .select-img label {
+  margin: 0;
 }
 
-main .comments-list {
-  text-align: left;
-  margin: 0 50px;
+main form .upload-article-cta input {
+  margin-top: 10px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-left: -25px;
 }
-
-main .comments-list h5 {
-  color: var(--third-color);
-}
-
-footer {
-  text-align: center;
-}
-/*# sourceMappingURL=blog.css.map */
+/*# sourceMappingURL=add-blog.css.map */

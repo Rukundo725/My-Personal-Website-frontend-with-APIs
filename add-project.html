@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
+    <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <link rel="stylesheet" href="css/add-project.css">
+    <title>dashboard add project</title>
+</head>
+<body>
+    <main>
+    <a href="dash-projects.html"><span class="iconify" data-icon="bx:arrow-back" style="color: white;"></span></a>
+    <h1>Create a new project</h1>
+    <form action="">
+
+       <div class="container">
+            <label for="title">Title </label>
+            <input type="text" id="title" name="title">
+       </div>
+
+        <div class="container">
+            <label for="summary">Summary </label>
+            <textarea name="summary" id="sumarry" cols="30" rows="10"></textarea>
+        </div>
+
+       <div class="container">
+            <label for="link">Link</label>
+            <input type="url" id="link" name="link">
+       </div>
+
+       <div class="container select-img">
+            <label for="img">Select image</label>
+            <input type="file" id="img" name="img" accept="image/*">
+       </div>
+
+       <div class="upload-project-cta">
+        <input type="submit" class="upload-project" value="Upload project">
+       </div>
+
+
+    </form>
+    </main>
+</body>
+</html>
