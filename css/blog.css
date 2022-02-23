@@ -59,23 +59,34 @@ header .nav ul {
 }
 
 main {
-  margin: 100px 30px 0 30px;
+  margin: 100px 200px 0 200px;
+  background: #20333d;
+  text-align: center;
 }
 
 main article {
   display: -ms-grid;
   display: grid;
+  margin: 0 50px;
+  gap: 10px;
+}
+
+main article .article-img {
+  margin-top: 20px;
 }
 
 main article .article-img img {
   height: 284px;
-  width: 412px;
+  width: 812px;
 }
 
 main article .article-content .date-comment {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: var(--secondary-color);
 }
 
@@ -84,9 +95,9 @@ main article .article-content .date-comment .date {
 }
 
 main article .article-content form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
 }
 
 main article .article-content form textarea {
@@ -95,6 +106,15 @@ main article .article-content form textarea {
 
 main article .article-content form .send-comment-cta {
   cursor: pointer;
+}
+
+main article .article-content p {
+  text-align: left;
+}
+
+main .comments-list {
+  text-align: left;
+  margin: 0 50px;
 }
 
 main .comments-list h5 {

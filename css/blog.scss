@@ -56,14 +56,20 @@ header{
 }
 
 main{
-    margin: 100px 30px 0 30px;
+    margin: 100px 200px 0 200px;
+    // background-color: #212a31;
+    background: #20333d;
+    text-align: center;
     article{
         display: grid;
+        margin: 0 50px;
+        gap: 10px;
 
         .article-img{
+            margin-top: 20px;
             img{
                 height: 284px;
-                width: 412px;
+                width: 812px;
                  
             }
         }
@@ -71,6 +77,7 @@ main{
         .article-content{
             .date-comment{
                 display: flex;
+                justify-content: space-between;
                 color: var(--secondary-color);
                 
                 .date{
@@ -80,7 +87,8 @@ main{
             }
             form{
              
-                display: flex;
+                display: grid;
+                gap: 10px;
 
                 textarea{
                     height: 30px;
@@ -89,9 +97,15 @@ main{
                     cursor: pointer;
                 }
             }
+
+            p{
+                text-align: left;
+            }
         }
     }
     .comments-list{
+        text-align: left;
+        margin: 0 50px;
         h5{
             color: var(--third-color);
         }
