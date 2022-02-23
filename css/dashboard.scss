@@ -112,13 +112,16 @@ main{
                 }
             }
 
-            .search{
+            form{
                 margin-top: 10px;
                 margin-left: 10px;
-                textarea {
-                    height: 20px;
+                input {
+                    height: 30px;
                     border-radius: 50px;
                     padding: 5px 10px;
+                }
+                button{
+                    border: none;
                 }
             } 
 

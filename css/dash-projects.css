@@ -121,15 +121,19 @@ main .right-side .upper-content .iconify:hover {
   cursor: pointer;
 }
 
-main .right-side .upper-content .search {
+main .right-side .upper-content form {
   margin-top: 10px;
   margin-left: 10px;
 }
 
-main .right-side .upper-content .search textarea {
-  height: 20px;
+main .right-side .upper-content form input {
+  height: 30px;
   border-radius: 50px;
   padding: 5px 10px;
+}
+
+main .right-side .upper-content form button {
+  border: none;
 }
 
 main .right-side .upper-content .add-project {
