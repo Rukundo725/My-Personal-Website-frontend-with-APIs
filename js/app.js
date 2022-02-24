@@ -81,7 +81,7 @@ articleForm.addEventListener('submit', (e) => {
     alert("The article was created");
 });
 
-// login authentification
+// login authentication
 logInForm.addEventListener('submit', (e)=>{
     e.preventDefault()
     firebase.auth().signInWithEmailAndPassword(form.email.value, form.password.value)
