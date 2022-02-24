@@ -16,8 +16,10 @@ const db = firebase.firestore();
 
 //  declaration of variables 
 const messageList = document.querySelector('#message-list');// getting the messageList id from dash-messageList.html 
-const messageForm = document.querySelector('#send-message-form'); // getting elements of the form through send-message-form id of the index.html
+const messageForm = document.getElementById('send-message-form'); // getting elements of the form through send-message-form id of the index.html
 const articleForm = document.querySelector('#add-new-article-form'); // getting the content of the blog form through add-new-article-form id of the add-blog.html
+const logInForm = document.querySelector('#log-in-form') // creating a variable to access the log in form from login.html
+// console.log(messageForm, messageList);
 
 
 // create element & render message(function to render messages from fire base firestore)
@@ -70,9 +72,22 @@ articleForm.addEventListener('submit', (e) => {
         title: articleForm.title.value,
         article: articleForm.article.value,
         date: articleForm.date.value
-    });
+    }).then(les=>{
+        console.log(les)
+    }).catch(error=>{console.log(error.message)})
     articleForm.title.value = '';
     articleForm.article.value = '';
     articleForm.date.value = '';
     alert("The article was created");
+});
+
+// login authentification
+logInForm.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    firebase.auth().signInWithEmailAndPassword(form.email.value, form.password.value)
+    .then((userCredential) => {
+    console.log("Logged In")
+    window.open("dashboard.html")
+  });
+
 });
