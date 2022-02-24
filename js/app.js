@@ -16,6 +16,7 @@ const db = firebase.firestore();
 
 //  declaration of variables 
 const messageList = document.querySelector('#message-list');// getting the messageList id from dash-messageList.html 
+const messageForm = document.querySelector('#send-message-form'); // getting elements of the form through send-message-form id of the index.html
 
 // create element & render message(function to render messages from fire base firestore)
 function renderMessage(doc){
@@ -44,4 +45,18 @@ db.collection('messages').get().then(snapshot => {
     snapshot.docs.forEach(doc => {
         renderMessage(doc);
     });
+});
+
+// saving data(messages) from the user through the index.html form
+messageForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    db.collection('messages').add({
+        name: messageForm.name.value,
+        email: messageForm.email.value,
+        message: messageForm.message.value
+    });
+    messageForm.name.value = '';
+    messageForm.email.value = '';
+    messageForm.message.value = '';
+    alert("The form was submitted");
 });
