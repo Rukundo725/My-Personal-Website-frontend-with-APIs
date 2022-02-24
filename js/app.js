@@ -17,6 +17,8 @@ const db = firebase.firestore();
 //  declaration of variables 
 const messageList = document.querySelector('#message-list');// getting the messageList id from dash-messageList.html 
 const messageForm = document.querySelector('#send-message-form'); // getting elements of the form through send-message-form id of the index.html
+const articleForm = document.querySelector('#add-new-article-form'); // getting the content of the blog form through add-new-article-form id of the add-blog.html
+
 
 // create element & render message(function to render messages from fire base firestore)
 function renderMessage(doc){
@@ -59,4 +61,18 @@ messageForm.addEventListener('submit', (e) => {
     messageForm.email.value = '';
     messageForm.message.value = '';
     alert("The form was submitted");
+});
+
+// saving data(articles) from the dashboard  to the firebase database
+articleForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    db.collection('articles').add({
+        title: articleForm.title.value,
+        article: articleForm.article.value,
+        date: articleForm.date.value
+    });
+    articleForm.title.value = '';
+    articleForm.article.value = '';
+    articleForm.date.value = '';
+    alert("The article was created");
 });

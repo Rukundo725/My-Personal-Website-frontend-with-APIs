@@ -7,6 +7,9 @@
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
     <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
     <link rel="stylesheet" href="css/add-blog.css">
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="js/app.js" type="module"></script>
     <title>dashboard add blog</title>
 </head>
 <body>
@@ -14,7 +17,7 @@
         
     <a href="dashboard.html"><span class="iconify" data-icon="bx:arrow-back" style="color: white;"></span></a>
     <h1>Create a new article</h1>
-    <form action="">
+    <form action="" id="add-new-article-form">
 
        <div class="container">
             <label for="title">Title </label>
@@ -31,10 +34,10 @@
             <input type="date" id="date" name="date">
        </div>
 
-       <div class="container select-img">
+       <!-- <div class="container select-img">
             <label for="img">Select image</label>
             <input type="file" id="img" name="img" accept="image/*">
-       </div>
+       </div> -->
 
        <div class="upload-article-cta">
         <input type="submit" class="upload-article" value="Upload article">
