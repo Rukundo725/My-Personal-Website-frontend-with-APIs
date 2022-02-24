@@ -84,7 +84,7 @@ articleForm.addEventListener('submit', (e) => {
 // login authentication
 logInForm.addEventListener('submit', (e)=>{
     e.preventDefault()
-    firebase.auth().signInWithEmailAndPassword(form.email.value, form.password.value)
+    firebase.auth().signInWithEmailAndPassword(logInForm.email.value, logInForm.password.value)
     .then((userCredential) => {
     console.log("Logged In")
     window.open("dashboard.html")
