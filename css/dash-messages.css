@@ -92,7 +92,7 @@ main .left-side .lower-content #log-out h3:hover {
 main .right-side {
   background-color: var(--primary-color);
   text-align: center;
-  width: 96%;
+  width: 90%;
   margin-left: 480px;
 }
 
@@ -107,10 +107,11 @@ main .right-side .lower-content {
 }
 
 main .right-side .lower-content .container {
+  margin: 0px 10px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 0.5fr 1fr 1.5fr;
       grid-template-columns: 0.5fr 1fr 1.5fr;
-  margin: 10px;
+  gap: 10px;
 }
 /*# sourceMappingURL=dash-messages.css.map */

@@ -90,7 +90,7 @@ main{
        background-color: var(--primary-color);
        text-align: center;
        
-       width: 96%;
+       width: 90%;
        margin-left: 480px;
 
        .upper-content{
@@ -104,9 +104,12 @@ main{
             margin-top: 80px;
            
             .container{
+                margin: 0px 10px;
                 display: grid;
                 grid-template-columns: 0.5fr 1fr 1.5fr;
-                margin: 10px;
+                gap: 10px;
+                
+                // margin: 10px;
             }
         }
     }
