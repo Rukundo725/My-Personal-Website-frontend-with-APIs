@@ -7,13 +7,16 @@
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
     <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
     <link rel="stylesheet" href="css/add-project.css">
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="js/app.js" type="module"></script>
     <title>dashboard add project</title>
 </head>
 <body>
     <main>
     <a href="dash-projects.html"><span class="iconify" data-icon="bx:arrow-back" style="color: white;"></span></a>
     <h1>Create a new project</h1>
-    <form action="">
+    <form action="" id="add-new-project-form">
 
        <div class="container">
             <label for="title">Title </label>
