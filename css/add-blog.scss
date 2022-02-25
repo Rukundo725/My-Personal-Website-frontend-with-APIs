@@ -12,56 +12,18 @@ body{
     background: #0C1D26;
     font-family: 'Poppins';
     width: 100%;
-    height: 100%;
-    color: var(--primary-color);
-    display: grid;
-
-}
-a{
-    text-decoration: none;
     color: var(--primary-color);
 
-    &:hover {
-        color: var(--secondary-color);
-    }
-    &:active{
-        color: var(--third-color);
-    }
 }
-header{
-    .nav{
-        display: grid;
-        grid-template-columns: 1fr 4fr;
-        background: #0C1D26;
-        position: fixed;
-        width: 100%;
-        // overflow: hidden;
-       
-    
-        .logo{
-            img{
-                border-radius: 50%;
-                width: 45px;
-                height: 45px;
-                margin: 10px;
-            }
-        }
-        ul{
-            display: flex;
-            justify-content: space-between;
-            margin-right: 170px;
-            list-style: none;
-        }
-    }
-}
-
 main{
     margin: 50px 200px;
     background: #20333d;
     text-align: center;
-    .iconify{
+    a{
+        .iconify{
         width: 45px;
         height: 45px;
+        }
     }
    
     form{

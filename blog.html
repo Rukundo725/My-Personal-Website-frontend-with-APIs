@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
     <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="js/blog.js" type="module"></script>
     <link rel="stylesheet" href="css/blog.css">
     <title>blog</title>
 </head>
@@ -83,7 +86,7 @@
                   
                     <input type="text" id="email" name="email" placeholder="Your E-maill">
                    
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Write your comment here"></textarea>
+                    <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Write your comment here"></textarea>
 
                     <input type="submit" class="send-comment-cta" value="comment">
                 </form>
