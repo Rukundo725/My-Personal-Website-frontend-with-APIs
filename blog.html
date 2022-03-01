@@ -8,8 +8,9 @@
     <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
-    <script src="js/blog.js" type="module"></script>
-    <link rel="stylesheet" href="css/blog.css">
+    <script src="../js/firebase.js"></script>
+    <script src="../js/blog.js" type="module"></script>
+    <link rel="stylesheet" href="../css/blog.css">
     <title>blog</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
 
         <nav class="nav" id="nav">
             <div class="logo">
-                <img id="logo" src="assets/MY LOGO.jpg" alt="My logo">
+                <img id="logo" src="../assets/MY LOGO.jpg" alt="My logo">
             </div>
             <ul>
                 <li><a href="index.html#home-content">Home</a></li>
@@ -35,7 +36,7 @@
         <article>
 
             <div class="article-img">
-                <img id="article-img" src="assets/article-img.jpeg" alt="article image">
+                <img id="article-img" src="../assets/article-img.jpeg" alt="article image">
             </div>
 
             <div class="article-content">
@@ -84,9 +85,9 @@
 
                 <form action="" id="comment-section">
                   
-                    <input type="text" id="email" name="email" placeholder="Your E-maill">
+                    <input type="text" id="email" name="email" placeholder="Your E-maill" required="required">
                    
-                    <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Write your comment here"></textarea>
+                    <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Write your comment here" required="required"></textarea>
 
                     <input type="submit" class="send-comment-cta" value="comment">
                 </form>
