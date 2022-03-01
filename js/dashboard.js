@@ -1,27 +1,17 @@
 
-// configuring the firebase connection 
-const firebaseConfig = {
-    apiKey: "AIzaSyCW9SS2XGL0OLGNXc2LjabpQYwxDBTGnoo",
-    authDomain: "owner-my-personal-web.firebaseapp.com",
-    projectId: "owner-my-personal-web",
-    storageBucket: "owner-my-personal-web.appspot.com",
-    messagingSenderId: "14382238606",
-    appId: "1:14382238606:web:fcf7d8a1919b9d9e68b2df",
-    measurementId: "G-MP4TB9HZPF"
-};
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
-
 //  declaration of variables 
-const articleList = document.querySelector('.container');
+const articleList = document.querySelector('#article-list');
+// const deleteArticle = document.querySelector('#delete');
 
 // create element & render article(function to render articles from fire base firestore)
 const renderArticle = function(doc){
+
+    let container = document.createElement('div');
+    container.className = 'container';
+    container.setAttribute('article-id', doc.id);
+
     let article = document.createElement('article');
-    article.setAttribute('data-id', doc.id);
-    
+
     let div1 = document.createElement('div');
     div1.className = 'article-img';
 
@@ -66,6 +56,8 @@ const renderArticle = function(doc){
 
     let div6 = document.createElement('div');
     div6.className = 'edit-delete';
+    div6.setAttribute('article-id', doc.id);
+   
     
 
     let span4 = document.createElement('span');
@@ -77,6 +69,8 @@ const renderArticle = function(doc){
     span5.className = 'iconify';
     span5.setAttribute("id", "delete");
     span5.setAttribute("data-icon", "fluent:delete-28-filled");
+
+    
    
 
     
@@ -108,15 +102,32 @@ const renderArticle = function(doc){
     article.appendChild(div2);
     div6.appendChild(span4);
     div6.appendChild(span5);
-    articleList.appendChild(article);
-    articleList.appendChild(div6);
-
-     // deleting data
+    container.appendChild(article);
+    container.appendChild(div6);
+    articleList.appendChild(container);
+    // deleting data
     span5.addEventListener('click', (e) => {
         e.stopPropagation();
-        let id = e.target.parentElement.getAttribute('data-id');
+        let id = e.target.parentElemen.getAttribute('article-id');
+        // let id = doc.id;
+        console.log(id)
         db.collection('articles').doc(id).delete();
     });
+
+
+    // // deleting data
+    // span5.addEventListener('click', (e) => {
+    //     e.stopPropagation();
+    //     let id = e.target.parentElement.getAttribute('article-id');
+    //     // let id = doc.id;
+    //     console.log(id)
+    //     db.collection('articles').doc(id).delete();
+    // });
+
+  
+
+
+
 }
 
 // getting data(articles) from the firebase
@@ -125,6 +136,9 @@ db.collection('articles').get().then(snapshot => {
         renderArticle(doc);
     });
 });
+
+     
+     
 
 
 

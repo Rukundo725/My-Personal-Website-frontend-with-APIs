@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="../css/dashboard.css">
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+    <script src="../js/firebase.js" type="module"></script>
     <script src="../js/dashboard.js" type="module"></script>
+    <script src="../js/delete-article.js" type="module"></script>
     <title>Dashboard</title>
 </head>
 <body>
@@ -64,10 +67,10 @@
 
             </div>
 
-            <div class="lower-content">
+            <div class="lower-content" id="article-list">
 
-                <div class="container">
-
+                <!-- <div class="container"> -->
+<!-- 
                     <article>
 
                         <div class="article-img">
@@ -186,14 +189,14 @@
                             </p>
                         </div>
 
-                    </article>
+                    </article> -->
 
-                    <div class="edit-delete">
+                    <!-- <div class="edit-delete">
                         <span class="iconify" id="edit" data-icon="entypo:edit"></span>
                         <span class="iconify" id="delete" data-icon="fluent:delete-28-filled"></span>
-                    </div>
+                    </div> -->
 
-                </div>
+                <!-- </div> -->
 
             </div>
             
