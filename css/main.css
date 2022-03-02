@@ -368,19 +368,21 @@ a:active {
   display: -ms-flexbox;
   display: flex;
   justify-self: end;
-  margin-bottom: -175px;
-  position: relative;
-  width: 100%;
+  height: 160px;
 }
 
 .contact-me-cta .massage-me-cta .message-me .container form .one .form-left-side {
   display: -ms-grid;
   display: grid;
+  gap: 5px;
 }
 
-.contact-me-cta .massage-me-cta .message-me .container form .one .form-left-side .container-2 {
-  margin-bottom: 175px;
+.contact-me-cta .massage-me-cta .message-me .container form .one .form-left-side .container {
   margin-left: 3px;
+}
+
+.contact-me-cta .massage-me-cta .message-me .container form .one .form-left-side #send-message {
+  margin-left: 60px;
 }
 
 .contact-me-cta .massage-me-cta .message-me .container form .one .form-right-side {
@@ -394,13 +396,7 @@ a:active {
 }
 
 .contact-me-cta .massage-me-cta .message-me .container form .send-message-cta {
-  top: 120px;
   padding: 0 170px;
-  font-weight: bold;
-  font-size: large;
-  -ms-grid-column-align: start;
-      justify-self: start;
-  margin-left: 50px;
 }
 
 .contact-me-cta .massage-me-cta .message-me .container form .send-message-cta:hover {
