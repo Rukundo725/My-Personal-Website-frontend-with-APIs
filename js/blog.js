@@ -1,6 +1,20 @@
 //  declaration of variables 
 const commentForm = document.querySelector('#comment-section'); // getting the comment of the user  through comment-section id 
 const commentList = document.querySelector('.comments-list');// getting the commentList  from dash-messageList.html 
+const id = location.hash.slice(1);
+
+// console.log(id);
+
+const title = document.getElementById('title');
+const date = document.getElementById('date');
+const article = document.getElementById('article');
+
+db.collection('articles').doc(id).get().then(res=> {
+    title.innerHTML = res.data().title;
+    date.innerHTML = res.data().date;
+    article.innerHTML = res.data().article;
+
+})
 
 
 // saving data(comments) from the article  to the firebase database
@@ -44,3 +58,4 @@ db.collection('comments').get().then(snapshot => {
     });
 });
 
+// =======================================================================
