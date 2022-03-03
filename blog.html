@@ -8,6 +8,7 @@
     <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel = "stylesheet">
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="../js/firebase.js"></script>
     <script src="../js/blog.js" type="module"></script>
     <link rel="stylesheet" href="../css/blog.css">
@@ -41,7 +42,7 @@
 
             <div class="article-content">
 
-                <h2>The title of the blog about coding journey</h2>
+                <h2 id="title">The title of the blog about coding journey</h2>
 
                 <div class="date-comment">
 
@@ -57,7 +58,7 @@
                 
                 </div>
 
-                <p>
+                <p id="article">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Voluptates consequatur porro facere qui aspernatur eaque, 
                     labore quaerat a ut eveniet veritatis laboriosam placeat pariatur doloribus
