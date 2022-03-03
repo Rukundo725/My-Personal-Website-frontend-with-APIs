@@ -89,8 +89,7 @@ const renderArticle = function(doc){
     let span3 = document.createElement('span');
     span3.setAttribute("id", "link");
 
-    let a = document.createElement('a');
-
+    let readMore = document.createElement('a');
     var link = document.createTextNode("Read-more");
 
     
@@ -102,7 +101,10 @@ const renderArticle = function(doc){
     i2.innerHTML = "comment";
     span2.innerHTML = 4;
     p.textContent = doc.data().article.substring(0,140);
-    a.href = "../blog.html"; 
+    readMore.addEventListener('click', (e) => {
+      e.preventDefault();
+      location.href = "blog.html#"+doc.id;
+  })
  
 
     articleImg.appendChild(img);
@@ -113,8 +115,8 @@ const renderArticle = function(doc){
     comment.appendChild(span2);
     dateComment.appendChild(date);
     dateComment.appendChild(comment);
-    a.appendChild(link); 
-    span3.appendChild(a);
+    readMore.appendChild(link); 
+    span3.appendChild(readMore);
     p.appendChild(span3);
     articleContent.appendChild(dateComment);
     articleContent.appendChild(p);
