@@ -72,7 +72,7 @@ const renderArticle = function(doc){
     span5.setAttribute("data-icon", "fluent:delete-28-filled");
     span5.setAttribute('article-id', doc.id);
      span5.setAttribute("onclick", "deleteArticle");
-    // span5.style.color = 'yellow';
+    span5.style.color = 'yellow';
 
     
    
