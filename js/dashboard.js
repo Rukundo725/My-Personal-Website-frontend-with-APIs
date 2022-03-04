@@ -71,8 +71,8 @@ const renderArticle = function(doc){
     span5.setAttribute("id", "delete");
     span5.setAttribute("data-icon", "fluent:delete-28-filled");
     span5.setAttribute('article-id', doc.id);
-     span5.setAttribute("onclick", "deleteArticle");
-    span5.style.color = 'yellow';
+    //  span5.setAttribute("onclick", "deleteArticle");
+    // span5.style.color = 'yellow';
 
     
    
@@ -133,6 +133,18 @@ const renderArticle = function(doc){
     
     // span5.addEventListener("click",deleteArticle);
 
+
+    // =================================================
+
+    // edit article
+
+    // span4.addEventListener('click',(e)=>{
+    //     e.preventDefault();
+    //     console.log('clicked')
+    //     location.href = `update-blog.html#${doc.id}`
+    // })
+
+
 }
 
 // getting data(articles) from the firebase
@@ -144,20 +156,26 @@ db.collection('articles').get().then(snapshot => {
 
 
 
-    const deleteArticle = function(e){
+    // const deleteArticle = function(e){
+    //     e.preventDefault();
+    //     db.collection('articles').doc(doc.id).delete()
+    //     .then(res=>{
+    //         alert("Article deleted");
+    //         location.reload();
+    //     }).catch(err=>{
+    //         alert("Error: " + err.message)
+    //     })
+    // }
+
+
+   const updateArticle = (e)=>{
         e.preventDefault();
-        db.collection('articles').doc(doc.id).delete()
-        .then(res=>{
-            alert("Article deleted");
-            location.reload();
-        }).catch(err=>{
-            alert("Error: " + err.message)
-        })
+        console.log('clicked')
+        location.href = `update-blog.html#${doc.id}`
     }
 
      
-
-
+    
 
 
 
