@@ -61,16 +61,17 @@ const renderArticle = function(doc){
    
     
 
-    let span4 = document.createElement('span');
-    span4.className = 'iconify';
-    span4.setAttribute("id", "edit");
-    span4.setAttribute("data-icon", "entypo:edit");
+    let button1 = document.createElement('button');
+    button1.className = 'iconify';
+    button1.setAttribute("type", "button");
+    button1.setAttribute("id", "edit");
+    button1.setAttribute("data-icon", "entypo:edit");
 
-    let span5 = document.createElement('span');
-    span5.className = 'iconify';
-    span5.setAttribute("id", "delete");
-    span5.setAttribute("data-icon", "fluent:delete-28-filled");
-    span5.setAttribute('article-id', doc.id);
+    let button2 = document.createElement('button');
+    button2.className = 'iconify';
+    button2.setAttribute("id", "delete");
+    button2.setAttribute("data-icon", "fluent:delete-28-filled");
+    button2.setAttribute('article-id', doc.id);
     //  span5.setAttribute("onclick", "deleteArticle");
     // span5.style.color = 'yellow';
 
@@ -104,8 +105,8 @@ const renderArticle = function(doc){
     articleContent.appendChild(p);
     article.appendChild(articleImg);
     article.appendChild(articleContent);
-    editDelete.appendChild(span4);
-    editDelete.appendChild(span5);
+    editDelete.appendChild(button1);
+    editDelete.appendChild(button2);
     container.appendChild(article);
     container.appendChild(editDelete);
     articleList.appendChild(container);
@@ -119,16 +120,16 @@ const renderArticle = function(doc){
     //     db.collection('articles').doc(doc.id).delete();
     // });
 
-    // span5.addEventListener("click",(e)=>{
-    //     e.preventDefault();
-    //     db.collection('articles').doc(id).delete()
-    //     .then(res=>{
-    //         alert("Article deleted");
-    //         location.reload();
-    //     }).catch(err=>{
-    //         alert("Error: " + err.message)
-    //     })
-    // })
+    button2.addEventListener("click",(e)=>{
+        e.preventDefault();
+        db.collection('articles').doc(doc.id).delete()
+        .then(res=>{
+            alert("Article deleted");
+            location.reload();
+        }).catch(err=>{
+            alert("Error: " + err.message)
+        })
+    })
 
     
     // span5.addEventListener("click",deleteArticle);
@@ -138,11 +139,11 @@ const renderArticle = function(doc){
 
     // edit article
 
-    // span4.addEventListener('click',(e)=>{
-    //     e.preventDefault();
-    //     console.log('clicked')
-    //     location.href = `update-blog.html#${doc.id}`
-    // })
+    button1.addEventListener('click',(e)=>{
+        e.preventDefault();
+        console.log('clicked')
+        location.href = `update-blog.html#${doc.id}`
+    })
 
 
 }
@@ -168,11 +169,11 @@ db.collection('articles').get().then(snapshot => {
     // }
 
 
-   const updateArticle = (e)=>{
-        e.preventDefault();
-        console.log('clicked')
-        location.href = `update-blog.html#${doc.id}`
-    }
+//    const updateArticle = (e)=>{
+//         e.preventDefault();
+//         console.log('clicked')
+//         location.href = `update-blog.html#${doc.id}`
+//     }
 
      
     
