@@ -1,6 +1,7 @@
 
 //  declaration of variables 
 const articleList = document.querySelector('#article-list');
+
 // const deleteArticle = document.querySelector('#delete');
 
 // create element & render article(function to render articles from fire base firestore)
@@ -12,23 +13,23 @@ const renderArticle = function(doc){
 
     let article = document.createElement('article');
 
-    let div1 = document.createElement('div');
-    div1.className = 'article-img';
+    let articleImg = document.createElement('div');
+    articleImg.className = 'article-img';
 
     let img = document.createElement('img');
     img.setAttribute("id", "article-img");
 
-    let div2 = document.createElement('div');
-    div2.className = 'article-content';
+    let articleContent = document.createElement('div');
+    articleContent.className = 'article-content';
 
     let h2 = document.createElement('h2');
 
-    let div3 = document.createElement('div');
-    div3.className = 'date-comment';
+    let dateComment = document.createElement('div');
+    dateComment.className = 'date-comment';
 
 
-    let div4 = document.createElement('div');
-    div4.className = 'date';
+    let date = document.createElement('div');
+    date.className = 'date';
    
     let i1 = document.createElement('i');
     i1.className = 'material-icons';
@@ -36,8 +37,8 @@ const renderArticle = function(doc){
     let span1 = document.createElement('span');
     span1.setAttribute("id", "date");
 
-    let div5 = document.createElement('div');
-    div5.className = 'comment';
+    let comment = document.createElement('div');
+    comment.className = 'comment';
    
     let i2 = document.createElement('i');
     i2.className = 'material-icons';
@@ -54,21 +55,25 @@ const renderArticle = function(doc){
 
     var link = document.createTextNode("Read-more");
 
-    let div6 = document.createElement('div');
-    div6.className = 'edit-delete';
-    div6.setAttribute('article-id', doc.id);
+    let editDelete = document.createElement('div');
+    editDelete.className = 'edit-delete';
+    editDelete.setAttribute('article-id', doc.id);
    
     
 
-    let span4 = document.createElement('span');
-    span4.className = 'iconify';
-    span4.setAttribute("id", "edit");
-    span4.setAttribute("data-icon", "entypo:edit");
+    let button1 = document.createElement('button');
+    button1.className = 'iconify';
+    button1.setAttribute("type", "button");
+    button1.setAttribute("id", "edit");
+    button1.setAttribute("data-icon", "entypo:edit");
 
-    let span5 = document.createElement('span');
-    span5.className = 'iconify';
-    span5.setAttribute("id", "delete");
-    span5.setAttribute("data-icon", "fluent:delete-28-filled");
+    let button2 = document.createElement('button');
+    button2.className = 'iconify';
+    button2.setAttribute("id", "delete");
+    button2.setAttribute("data-icon", "fluent:delete-28-filled");
+    button2.setAttribute('article-id', doc.id);
+    //  span5.setAttribute("onclick", "deleteArticle");
+    // span5.style.color = 'yellow';
 
     
    
@@ -81,51 +86,64 @@ const renderArticle = function(doc){
     span1.textContent = doc.data().date;
     i2.innerHTML = "comment";
     span2.innerHTML = 4;
-    p.textContent = doc.data().brief;
+    p.textContent = doc.data().article.substring(0,140);
     a.href = "../blog.html"; 
  
 
-    div1.appendChild(img);
-    div2.appendChild(h2);
-    div4.appendChild(i1);
-    div4.appendChild(span1);
-    div5.appendChild(i2);
-    div5.appendChild(span2);
-    div3.appendChild(div4);
-    div3.appendChild(div5);
+    articleImg.appendChild(img);
+    articleContent.appendChild(h2);
+    date.appendChild(i1);
+    date.appendChild(span1);
+    comment.appendChild(i2);
+    comment.appendChild(span2);
+    dateComment.appendChild(date);
+    dateComment.appendChild(comment);
     a.appendChild(link); 
     span3.appendChild(a);
     p.appendChild(span3);
-    div2.appendChild(div3);
-    div2.appendChild(p);
-    article.appendChild(div1);
-    article.appendChild(div2);
-    div6.appendChild(span4);
-    div6.appendChild(span5);
+    articleContent.appendChild(dateComment);
+    articleContent.appendChild(p);
+    article.appendChild(articleImg);
+    article.appendChild(articleContent);
+    editDelete.appendChild(button1);
+    editDelete.appendChild(button2);
     container.appendChild(article);
-    container.appendChild(div6);
+    container.appendChild(editDelete);
     articleList.appendChild(container);
-    // deleting data
-    span5.addEventListener('click', (e) => {
-        e.stopPropagation();
-        let id = e.target.parentElemen.getAttribute('article-id');
-        // let id = doc.id;
-        console.log(id)
-        db.collection('articles').doc(id).delete();
-    });
-
-
+  
     // // deleting data
     // span5.addEventListener('click', (e) => {
-    //     e.stopPropagation();
-    //     let id = e.target.parentElement.getAttribute('article-id');
+    //     // e.stopPropagation();
+    //     // let id = e.target.parentElement.getAttribute('article-id');
     //     // let id = doc.id;
-    //     console.log(id)
-    //     db.collection('articles').doc(id).delete();
+    //     console.log(doc.id)
+    //     db.collection('articles').doc(doc.id).delete();
     // });
 
-  
+    button2.addEventListener("click",(e)=>{
+        e.preventDefault();
+        db.collection('articles').doc(doc.id).delete()
+        .then(res=>{
+            alert("Article deleted");
+            location.reload();
+        }).catch(err=>{
+            alert("Error: " + err.message)
+        })
+    })
 
+    
+    // span5.addEventListener("click",deleteArticle);
+
+
+    // =================================================
+
+    // edit article
+
+    button1.addEventListener('click',(e)=>{
+        e.preventDefault();
+        console.log('clicked')
+        location.href = `update-blog.html#${doc.id}`
+    })
 
 
 }
@@ -137,10 +155,28 @@ db.collection('articles').get().then(snapshot => {
     });
 });
 
-     
-     
 
 
+    // const deleteArticle = function(e){
+    //     e.preventDefault();
+    //     db.collection('articles').doc(doc.id).delete()
+    //     .then(res=>{
+    //         alert("Article deleted");
+    //         location.reload();
+    //     }).catch(err=>{
+    //         alert("Error: " + err.message)
+    //     })
+    // }
+
+
+//    const updateArticle = (e)=>{
+//         e.preventDefault();
+//         console.log('clicked')
+//         location.href = `update-blog.html#${doc.id}`
+//     }
+
+     
+    
 
 
 

@@ -9,8 +9,10 @@
     <script src="https://code.iconify.design/2/2.1.2/iconify.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="../js/firebase.js"></script>
     <script src="../js/main.js" type="module"></script>
+    <!-- <script src="../js/dashboard.js" type="module"></script> -->
     <title>MY Personal Website</title>
 </head>
 <body>
@@ -114,7 +116,7 @@
 
             <div class="read-more">
 
-                <a id="read-more" href="https://drive.google.com/file/d/1f6DhBCzNzvWEHALiS4CnpSGxTPOxgsqu/view?usp=sharing" target="_blank">Read more about my skills and experience</a> 
+                <a id="read-more" href="https://drive.google.com/file/d/1_zCbS4E-5S7rZHoYRAco_gF_JLwxqdPa/view?usp=sharing" target="_blank">Read more about my skills and experience</a> 
     
             </div>
 
@@ -220,7 +222,7 @@
                 <div class="article-container">
 
                     <!-- article 1  -->
-
+<!-- 
                     <article>
 
                         <div class="article-img">
@@ -253,11 +255,11 @@
                             </p>
                         </div>
 
-                    </article>
+                    </article> -->
 
                     <!-- article 2  -->
 
-                    <article>
+                    <!-- <article>
 
                         <div class="article-img">
                             <img id="article-img" src="../assets/article-img.jpeg" alt="article image">
@@ -289,11 +291,11 @@
                             </p>
                         </div>
                         
-                    </article>
+                    </article> -->
 
                     <!-- article 3  -->
 
-                    <article>
+                    <!-- <article>
 
                         <div class="article-img">
                             <img id="article-img" src="../assets/article-img.jpeg" alt="article image">
@@ -325,14 +327,14 @@
                             </p>
                         </div>
                         
-                    </article>
+                    </article> -->
 
                     <!-- more contents 3 buttons  -->
 
-                    <div class="more-articles-icon">
+                    <!-- <div class="more-articles-icon">
 
                         <span class="iconify" data-icon="bi:three-dots" style="color: white;" data-width="45" data-height="45"></span>
-                    </div>
+                    </div> -->
 
                 </div>
 
@@ -445,13 +447,20 @@
                                         <input type="text" id="name" name="name" placeholder="Your Name" required="required" >
 
                                     </div>
-
-                                    <div class="container-2">
+                                    
+                                    <div class="container">
 
                                         <label for="email">Email</label>
                                         <input class="email" type="email" id="email" name="email" placeholder="EX: email@account.com" required="required">
                                         
                                     </div>
+                                    <div class="container" id="send-message">
+
+                                        <input type="submit" class="send-message-cta" value="SEND">
+                                    
+                                        
+                                    </div>
+
                                     
                                 </div>
         
@@ -465,7 +474,7 @@
 
                             </div>
         
-                            <input type="submit" class="send-message-cta" value="SEND">
+                          
     
                         </form>
     

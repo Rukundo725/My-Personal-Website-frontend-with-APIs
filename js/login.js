@@ -7,7 +7,9 @@ logInForm.addEventListener('submit', (e)=>{
   firebase.auth().signInWithEmailAndPassword(logInForm.email.value, logInForm.password.value)
   .then((userCredential) => {
     console.log("Logged In")
-    window.open("dashboard.html")
+    // window.open("dashboard.html")
+    location.href ='dashboard.html';
   });
 
 });
+

@@ -110,13 +110,16 @@ const deleteArticle = document.querySelector("#delete");
 // }
 
  // deleting data
- deleteArticle.addEventListener('click', (e) => {
-    e.stopPropagation();
-    let id = e.target.parentElement.getAttribute('article-id');
-    // let id = doc.id;
-    console.log(id)
-    db.collection('articles').doc(id).delete();
-});
+deleteArticle.addEventListener("click",(e)=>{
+    e.preventDefault();
+    db.collection('articles').doc(doc.id).delete()
+    .then(res=>{
+        alert("Post deleted");
+        location.reload();
+    }).catch(err=>{
+        alert("Error: " + err.message)
+    })
+})
 
 
 
