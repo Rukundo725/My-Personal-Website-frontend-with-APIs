@@ -9,12 +9,15 @@ const title = document.getElementById('title');
 const date = document.getElementById('date');
 const article = document.getElementById('article');
 
-db.collection('articles').doc(id).get().then(res=> {
-    title.innerHTML = res.data().title;
-    date.innerHTML = res.data().date;
-    article.innerHTML = res.data().article;
-
-})
+fetch(`http://localhost:4000/api/blog/${id}`)
+  .then((response) => response.json())
+  .then((doc) => {
+    console.log(doc);
+    title.innerHTML = doc.Article.title;
+    date.innerHTML = doc.Article.createdAt;
+    //     image.src = res.data().image
+    article.innerHTML = doc.Article.body;
+  });
 
 
 // saving data(comments) from the article  to the firebase database

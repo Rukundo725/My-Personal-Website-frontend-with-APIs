@@ -48,7 +48,7 @@ messageForm.addEventListener('submit', (e) => {
 const renderArticle = function(doc){
 
     let article = document.createElement('article');
-    article.setAttribute('article-id', doc.id);
+    article.setAttribute('article-id', doc._id);
 
 
     let articleImg = document.createElement('div');
@@ -95,15 +95,15 @@ const renderArticle = function(doc){
     
     img.src ="../assets/article-img.jpeg"
     img.alt ="Article image"
-    h2.textContent = doc.data().title;
+    h2.textContent = doc.title;
     i1.innerHTML = "event"
-    span1.textContent = doc.data().date;
+    span1.textContent = doc.createdAt;
     i2.innerHTML = "comment";
     span2.innerHTML = 4;
-    p.textContent = doc.data().article.substring(0,140);
+    p.textContent = doc.body.substring(0,140);
     readMore.addEventListener('click', (e) => {
       e.preventDefault();
-      location.href = "blog.html#"+doc.id;
+      location.href = "blog.html#"+doc._id;
   })
  
 
@@ -126,12 +126,21 @@ const renderArticle = function(doc){
 }
 
 // getting data(articles) from the firebase
-db.collection('articles').get().then(snapshot => {
-    snapshot.docs.forEach(doc => {
-        renderArticle(doc);
-    });
-});
+const getData = async ( ) =>{
+  const response = await fetch("http://localhost:4000/api/blog/");
 
+ //turning the response into the usable data
+  const data = await response.json( );
+
+  //Rendering articles from database
+  
+  // console.log(data.Articles);
+  data.Articles.forEach((doc) => {
+      renderArticle(doc);
+  });
+}
+
+getData( );
 
 
 

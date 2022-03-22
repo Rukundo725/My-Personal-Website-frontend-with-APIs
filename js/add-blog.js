@@ -4,16 +4,30 @@ const articleForm = document.querySelector('#add-new-article-form'); // getting 
 // saving data(articles) from the dashboard  to the firebase database
 articleForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('articles').add({
-        title: articleForm.title.value,
-        brief: articleForm.brief.value,
-        article: articleForm.article.value,
-        date: articleForm.date.value
-        
+    // get form values
+  let title = document.getElementById("title").value;
+  //   let createdDate = document.getElementById("cdate").value;
+    let article = document.getElementById("article").value;
+    fetch("http://localhost:4000/api/blog/add", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `bearer ${localStorage.getItem("jwtToken")}`,
+    },
+    body: JSON.stringify({
+      title: title,
+      body: article,
+    }),
+  })
+    .then(() => {
+      console.log("Data saved");
+      // window.location.reload();
+    })
+    .catch((error) => {
+      console.log(error);
     });
-    articleForm.title.value = '';
-    articleForm.brief.value = '';
-    articleForm.article.value = '';
-    articleForm.date.value = '';
+    
     alert("The article was created");
+    window.location.href = "../dashboard.html";
 });
+
