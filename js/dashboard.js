@@ -2,6 +2,7 @@
 //  declaration of variables 
 const articleList = document.querySelector('#article-list');
 
+
 // const deleteArticle = document.querySelector('#delete');
 
 // create element & render article(function to render articles from fire base firestore)
@@ -9,7 +10,7 @@ const renderArticle = function(doc){
 
     let container = document.createElement('div');
     container.className = 'container';
-    container.setAttribute('article-id', doc.id);
+    container.setAttribute('article-id', doc._id);
 
     let article = document.createElement('article');
 
@@ -51,44 +52,42 @@ const renderArticle = function(doc){
     let span3 = document.createElement('span');
     span3.setAttribute("id", "link");
 
-    let a = document.createElement('a');
-
+    let readMore = document.createElement('a');
     var link = document.createTextNode("Read-more");
+
 
     let editDelete = document.createElement('div');
     editDelete.className = 'edit-delete';
-    editDelete.setAttribute('article-id', doc.id);
    
+    let span4 = document.createElement('span');
+    span4.className = 'iconify';
+    span4.setAttribute("id", "edit");
+    span4.setAttribute("data-icon", "entypo:edit");
+
     
 
-    let button1 = document.createElement('button');
-    button1.className = 'iconify';
-    button1.setAttribute("type", "button");
-    button1.setAttribute("id", "edit");
-    button1.setAttribute("data-icon", "entypo:edit");
-
-    let button2 = document.createElement('button');
-    button2.className = 'iconify';
-    button2.setAttribute("id", "delete");
-    button2.setAttribute("data-icon", "fluent:delete-28-filled");
-    button2.setAttribute('article-id', doc.id);
-    //  span5.setAttribute("onclick", "deleteArticle");
-    // span5.style.color = 'yellow';
-
-    
+    let span5 = document.createElement('span');
+    span5.className = 'iconify';
+    span5.setAttribute("id", "delete");
+    span5.setAttribute("data-icon", "fluent:delete-28-filled");
    
 
+    let buttonEdit = document.createElement('button');
+    buttonEdit.setAttribute("type", "button");
+
+    let buttonDelete = document.createElement('button');
+    buttonDelete.setAttribute("type", "button");
+  
     
     img.src ="../assets/article-img.jpeg"
     img.alt ="Article image"
-    h2.textContent = doc.data().title;
+    h2.textContent = doc.title;
     i1.innerHTML = "event"
-    span1.textContent = doc.data().date;
+    span1.textContent = doc.createdAt;;
     i2.innerHTML = "comment";
     span2.innerHTML = 4;
-    p.textContent = doc.data().article.substring(0,140);
-    a.href = "../blog.html"; 
- 
+    p.textContent = doc.body.substring(0,240);
+    
 
     articleImg.appendChild(img);
     articleContent.appendChild(h2);
@@ -98,83 +97,86 @@ const renderArticle = function(doc){
     comment.appendChild(span2);
     dateComment.appendChild(date);
     dateComment.appendChild(comment);
-    a.appendChild(link); 
-    span3.appendChild(a);
-    p.appendChild(span3);
     articleContent.appendChild(dateComment);
     articleContent.appendChild(p);
     article.appendChild(articleImg);
     article.appendChild(articleContent);
-    editDelete.appendChild(button1);
-    editDelete.appendChild(button2);
+    buttonEdit.appendChild(span4)
+    buttonDelete.appendChild(span5)
+    editDelete.appendChild(buttonEdit);
+    editDelete.appendChild(buttonDelete);
     container.appendChild(article);
     container.appendChild(editDelete);
     articleList.appendChild(container);
-  
-    // // deleting data
-    // span5.addEventListener('click', (e) => {
-    //     // e.stopPropagation();
-    //     // let id = e.target.parentElement.getAttribute('article-id');
-    //     // let id = doc.id;
-    //     console.log(doc.id)
-    //     db.collection('articles').doc(doc.id).delete();
-    // });
 
-    button2.addEventListener("click",(e)=>{
+  // ================================================================================================
+    // deleting data
+    buttonDelete.addEventListener("click",(e)=>{
+        let id = doc._id;
         e.preventDefault();
-        db.collection('articles').doc(doc.id).delete()
-        .then(res=>{
-            alert("Article deleted");
-            location.reload();
-        }).catch(err=>{
-            alert("Error: " + err.message)
-        })
+        var answer = window.confirm("Are you sure you want to delete this blog?");
+        if (answer) {
+            fetch(`http://localhost:4000/api/blog/${id}`, {
+                  method: "DELETE",
+                  headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `bearer ${localStorage.getItem("jwtToken")}`,
+                  },
+                })
+                console.log(id);
+                alert('Article deleted')
+
+        }
+        else {
+            alert('Deleting Article was Aborted')
+        }
+        
     })
 
     
-    // span5.addEventListener("click",deleteArticle);
 
+   
+       
+    
+        
 
-    // =================================================
+    // ================================================================================================
 
     // edit article
 
-    button1.addEventListener('click',(e)=>{
+    buttonEdit.addEventListener('click',(e)=>{
+        let id = doc._id;
         e.preventDefault();
         console.log('clicked')
-        location.href = `update-blog.html#${doc.id}`
+        location.href = `../update-blog.html#${id}`
     })
-
 
 }
 
-// getting data(articles) from the firebase
-db.collection('articles').get().then(snapshot => {
-    snapshot.docs.forEach(doc => {
+
+const getData = async ( ) =>{
+    const response = await fetch("http://localhost:4000/api/blog/");
+ 
+   //turning the response into the usable data
+    const data = await response.json( );
+ 
+    //Rendering articles from database
+    
+    // console.log(data.Articles);
+    data.Articles.forEach((doc) => {
         renderArticle(doc);
     });
-});
+}
+ 
+getData( );
 
+window.onload = function () {
+    if (localStorage.getItem("jwtToken") === null) {
+      location.href = "../login.html";
+    }
+};
 
-
-    // const deleteArticle = function(e){
-    //     e.preventDefault();
-    //     db.collection('articles').doc(doc.id).delete()
-    //     .then(res=>{
-    //         alert("Article deleted");
-    //         location.reload();
-    //     }).catch(err=>{
-    //         alert("Error: " + err.message)
-    //     })
-    // }
-
-
-//    const updateArticle = (e)=>{
-//         e.preventDefault();
-//         console.log('clicked')
-//         location.href = `update-blog.html#${doc.id}`
-//     }
-
+   
      
     
 
