@@ -170,11 +170,7 @@ const getData = async ( ) =>{
  
 getData( );
 
-window.onload = function () {
-    if (localStorage.getItem("jwtToken") === null) {
-      location.href = "../login.html";
-    }
-};
+
 
    
      
