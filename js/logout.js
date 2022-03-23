@@ -1,17 +1,8 @@
 // logout authentication
-const logout = document.querySelector('#log-out');
+const log_out = document.querySelector('#log-out');
 
-logout.addEventListener('click', (e)=>{
+log_out.addEventListener('click',logout);
+function logout(e) {
     e.preventDefault()
-    auth.signOut().then(res=>{
-       console.log('sign-out successful');
-      auth.onAuthStateChanged(user => {
-          if (user) {
-
-          } else {
-              location.href = "../login.html"
-          }
-      });
-  });
-  
-});
+    localStorage.removeItem("jwtToken");
+    location.href = "../login.html";}

@@ -1,7 +1,6 @@
-auth.onAuthStateChanged(user => {
-    if (user) {
-        
-    } else {
-        location.href = "../login.html"
+
+window.onload = function () {
+    if (localStorage.getItem("jwtToken") === null) {
+      location.href = "../login.html";
     }
-})
+};

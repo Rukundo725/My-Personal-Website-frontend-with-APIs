@@ -1,4 +1,4 @@
-const updatePost = document.getElementById('edit');
+const updatePost = document.querySelector('.upload-article');
 const title = document.getElementById('title');
 const article = document.getElementById('article');
 
@@ -21,15 +21,14 @@ updatePost.addEventListener('click',(e)=>{
         },
         body: JSON.stringify({
           title:  title.value,
-          body: article.value,
+          article: article.value
         }),
       }).then(res=>{
         title.value = "";
         article.value = "";
         alert("Post updated");
-        location.href = "blog.html";
+        location.href = "../dashboard.html";
     }).catch(err=>{
         alert("Error: " + err.message)
     })
 })
-
