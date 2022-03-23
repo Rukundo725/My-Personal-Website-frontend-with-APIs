@@ -79,7 +79,7 @@ const renderArticle = function(doc){
     buttonDelete.setAttribute("type", "button");
   
     
-    img.src ="../assets/article-img.jpeg"
+    img.src ="assets/article-img.jpeg"
     img.alt ="Article image"
     h2.textContent = doc.title;
     i1.innerHTML = "event"
