@@ -127,7 +127,7 @@ const renderArticle = function(doc){
 
 // getting data(articles) from the firebase
 const getData = async ( ) =>{
-  const response = await fetch("http://localhost:4000/api/blog/");
+  const response = await fetch("https://mypersonalweb-app.herokuapp.com/api/blog/");
 
  //turning the response into the usable data
   const data = await response.json( );

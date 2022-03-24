@@ -9,7 +9,7 @@ const title = document.getElementById('title');
 const date = document.getElementById('date');
 const article = document.getElementById('article');
 
-fetch(`http://localhost:4000/api/blog/${id}`)
+fetch(`https://mypersonalweb-app.herokuapp.com/api/blog/${id}`)
   .then((response) => response.json())
   .then((doc) => {
     console.log(doc);

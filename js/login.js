@@ -11,7 +11,7 @@ logInForm.addEventListener('submit', (e)=>{
   //   location.href ='dashboard.html';
   // });
 
-  fetch("http://localhost:4000/api/user/login", {
+  fetch("https://mypersonalweb-app.herokuapp.com/api/user/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
