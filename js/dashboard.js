@@ -124,7 +124,8 @@ const renderArticle = function(doc){
                   },
                 })
                 console.log(id);
-                alert('Article deleted')
+                alert('Article deleted');
+                location.reload();
 
         }
         else {
