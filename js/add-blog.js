@@ -8,7 +8,7 @@ articleForm.addEventListener('submit', (e) => {
   let title = document.getElementById("title").value;
   //   let createdDate = document.getElementById("cdate").value;
     let article = document.getElementById("article").value;
-    fetch("http://localhost:4000/api/blog/add", {
+    fetch("https://mypersonalweb-app.herokuapp.com/api/blog/add", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

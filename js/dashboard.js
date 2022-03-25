@@ -116,7 +116,7 @@ const renderArticle = function(doc){
         e.preventDefault();
         var answer = window.confirm("Are you sure you want to delete this blog?");
         if (answer) {
-            fetch(`http://localhost:4000/api/blog/${id}`, {
+            fetch(`https://mypersonalweb-app.herokuapp.com/api/blog/${id}`, {
                   method: "DELETE",
                   headers: {
                     "Content-Type": "application/json",
@@ -124,7 +124,8 @@ const renderArticle = function(doc){
                   },
                 })
                 console.log(id);
-                alert('Article deleted')
+                alert('Article deleted');
+                location.reload();
 
         }
         else {
@@ -155,7 +156,7 @@ const renderArticle = function(doc){
 
 
 const getData = async ( ) =>{
-    const response = await fetch("http://localhost:4000/api/blog/");
+    const response = await fetch("https://mypersonalweb-app.herokuapp.com/api/blog/");
  
    //turning the response into the usable data
     const data = await response.json( );

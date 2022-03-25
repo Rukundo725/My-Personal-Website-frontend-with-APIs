@@ -4,14 +4,8 @@ const logInForm = document.querySelector('#log-in-form'); // creating a variable
 // login authentication
 logInForm.addEventListener('submit', (e)=>{
   e.preventDefault()
-  // firebase.auth().signInWithEmailAndPassword(logInForm.email.value, logInForm.password.value)
-  // .then((userCredential) => {
-  //   console.log("Logged In")
-  //   // window.open("dashboard.html")
-  //   location.href ='dashboard.html';
-  // });
 
-  fetch("http://localhost:4000/api/user/login", {
+  fetch("https://mypersonalweb-app.herokuapp.com/api/user/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

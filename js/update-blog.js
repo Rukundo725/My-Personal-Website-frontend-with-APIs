@@ -4,7 +4,7 @@ const article = document.getElementById('article');
 
 const id = location.hash.slice(1);
 
-fetch(`http://localhost:4000/api/blog/${id}`)
+fetch(`https://mypersonalweb-app.herokuapp.com/api/blog/${id}`)
   .then((response) => response.json())
   .then((data) => {
     console.log(data);
@@ -13,7 +13,7 @@ fetch(`http://localhost:4000/api/blog/${id}`)
 
 updatePost.addEventListener('click',(e)=>{
     e.preventDefault();
-    fetch(`http://localhost:4000/api/blog/${id}`, {
+    fetch(`https://mypersonalweb-app.herokuapp.com/api/blog/${id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
